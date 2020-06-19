@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dY1FJlAb0lhy4HOZx0O8M0uD4G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="" />
+      <created>1592587108090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592587108090</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2281" y="317" key="#Project_Structure" timestamp="1592587128866">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2281" y="317" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592587128866" />
+    <state x="1926" y="354" key="new project wizard" timestamp="1592590755157">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1926" y="354" key="new project wizard/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592590755157" />
+  </component>
+</project>
