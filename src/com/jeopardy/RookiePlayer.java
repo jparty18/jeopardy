@@ -1,12 +1,8 @@
-package Players;
+package com.jeopardy;
 
-public class RookiePlayers extends Players {
+public class RookiePlayer extends Player {
 
-  public RookiePlayers () {
-
-  }
-
-  public RookiePlayers (String name, Expertise level) {
+  public RookiePlayer(String name, Expertise level) {
     super(name, level);
   }
 

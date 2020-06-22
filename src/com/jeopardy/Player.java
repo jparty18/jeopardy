@@ -1,16 +1,12 @@
-package Players;
+package com.jeopardy;
 
-  public abstract class Players implements Assistance{
+  public abstract class Player implements Assistance{
     //instance variables
     private String name;
+    private int score = 0;
     private Expertise level;
 
-    //ctors
-    public Players (){
-
-    }
-
-    public Players (String name, Expertise level) {
+    public Player(String name, Expertise level) {
       setName(name);
       setLevel(level);
     }
@@ -25,6 +21,9 @@ package Players;
     public void setName(String name) {
       this.name = name;
     }
+
+    public int getScore() { return score; }
+    public void setScore(int score) { this.score = score; }
 
     public Expertise getLevel() {
       return level;

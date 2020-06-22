@@ -1,4 +1,4 @@
-package Players;
+package com.jeopardy;
 
 public enum Expertise {
   ROOKIE, ADVANCED
