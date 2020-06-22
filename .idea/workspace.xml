@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="Board and Players">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/jeopardy/QuestionTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PATH_TO_GIT" value="https://github.com/jai515/jeopardy.git" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dgfBS5D227YUtnNajuEOi30XOU" />
@@ -26,10 +41,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="Jeopardy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -52,7 +68,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\jai51\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,32 +78,87 @@
       <option name="presentableId" value="Default" />
       <updated>1592851520375</updated>
     </task>
+    <task id="LOCAL-00001" summary="Board and Players">
+      <created>1592852124274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592852124274</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Board and Players" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board and Players" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="76" key="#Project_Structure" timestamp="1592851710638">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851710638" />
-    <state width="1461" height="269" key="GridCell.Tab.0.bottom" timestamp="1592851720763">
+    <state x="533" y="243" key="FileChooserDialogImpl" timestamp="1592852856563">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720763" />
-    <state width="1461" height="269" key="GridCell.Tab.0.center" timestamp="1592851720762">
+    <state x="533" y="243" key="FileChooserDialogImpl/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852856563" />
+    <state x="614" y="413" key="Github.Dialog.Accounts.Choose" timestamp="1592852145244">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
-    <state width="1461" height="269" key="GridCell.Tab.0.left" timestamp="1592851720762">
+    <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852145244" />
+    <state width="730" height="269" key="GridCell.Tab.0.bottom" timestamp="1592852837787">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
-    <state width="1461" height="269" key="GridCell.Tab.0.right" timestamp="1592851720762">
+    <state width="730" height="269" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837787" />
+    <state width="730" height="269" key="GridCell.Tab.0.center" timestamp="1592852837786">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
+    <state width="730" height="269" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837786" />
+    <state width="730" height="269" key="GridCell.Tab.0.left" timestamp="1592852837786">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state width="730" height="269" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837786" />
+    <state width="730" height="269" key="GridCell.Tab.0.right" timestamp="1592852837787">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state width="730" height="269" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837787" />
+    <state x="392" y="263" key="MultipleFileMergeDialog" timestamp="1592852681844">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="392" y="263" key="MultipleFileMergeDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852681844" />
+    <state x="254" y="146" key="SettingsEditor" timestamp="1592852826654">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="254" y="146" key="SettingsEditor/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852826654" />
+    <state x="345" y="234" key="Vcs.Push.Dialog.v2" timestamp="1592852131684">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="345" y="234" key="Vcs.Push.Dialog.v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852131684" />
     <state x="564" y="279" key="chooseDestDirectoryDialog" timestamp="1592851623847">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="564" y="279" key="chooseDestDirectoryDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851623847" />
+    <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592852864801">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852864801" />
+    <state x="583" y="292" key="svn.repositoryBrowser" timestamp="1592852859879">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="583" y="292" key="svn.repositoryBrowser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852859879" />
+    <state x="570" y="275" key="svn4idea.import.options" timestamp="1592852858437">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="570" y="275" key="svn4idea.import.options/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852858437" />
   </component>
 </project>

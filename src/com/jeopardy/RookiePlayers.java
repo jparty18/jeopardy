@@ -1,4 +1,4 @@
-package Players;
+package com.jeopardy;
 
 public class RookiePlayers extends Players {
 
