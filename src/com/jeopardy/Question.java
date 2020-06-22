@@ -3,7 +3,6 @@ package com.jeopardy;
 import java.util.Objects;
 
 public class Question {
-    private static int dailyDoubleId;
 
     private boolean isDailyDouble = false;
     private int session;

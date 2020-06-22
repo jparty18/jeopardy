@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="Question class initial commit">
-      <change afterPath="$PROJECT_DIR$/test/com/jeopardy/QuestionTest.java" afterDir="false" />
+    <list default="true" id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Player.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/jeopardy/QuestionTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="0c20e4ee-a16b-4979-b701-9295f9981306" />
-  </component>
-  <component name="ProjectId" id="1dY1FJlAb0lhy4HOZx0O8M0uD4G" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1dgfBS5D227YUtnNajuEOi30XOU" />
   <component name="ProjectViewState">
     <option name="flattenModules" value="true" />
     <option name="flattenPackages" value="true" />
@@ -52,49 +24,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.jeopardy" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="?" />
-      <command value="QuestionClient" />
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.QuestionTest">
-    <configuration name="Question" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.Question" />
-      <module name="jeopardy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jeopardy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuestionClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.QuestionClient" />
+  <component name="RunManager">
+    <configuration name="Jeopardy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.Jeopardy" />
       <module name="jeopardy" />
       <extension name="coverage">
         <pattern>
@@ -106,74 +45,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.QuestionClient" />
-      <module name="jeopardy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuestionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jeopardy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jeopardy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jeopardy" />
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuestionTest.TestSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jeopardy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jeopardy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jeopardy" />
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
-      <option name="METHOD_NAME" value="TestSession" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuestionTests.TestSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jeopardy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jeopardy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jeopardy" />
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTests" />
-      <option name="METHOD_NAME" value="TestSession" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Question" />
-      <item itemvalue="Application.QuestionClient" />
-      <item itemvalue="JUnit.QuestionTests.TestSession" />
-      <item itemvalue="JUnit.QuestionTest" />
-      <item itemvalue="JUnit.QuestionTest.TestSession" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.QuestionTest" />
-        <item itemvalue="JUnit.QuestionTest.TestSession" />
-        <item itemvalue="JUnit.QuestionTests.TestSession" />
-        <item itemvalue="Application.QuestionClient" />
-        <item itemvalue="Application.Question" />
+        <item itemvalue="Application.Jeopardy" />
       </list>
     </recent_temporary>
   </component>
@@ -182,141 +56,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="" />
-      <created>1592587108090</created>
+      <changelist id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="" />
+      <created>1592851520375</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592587108090</updated>
+      <updated>1592851520375</updated>
     </task>
-    <task id="LOCAL-00001" summary="Question class initial commit">
-      <created>1592611429122</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1592611429122</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Question class initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Question class initial commit" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="283" y="111" key="#Project_Structure" timestamp="1592840285380">
+    <state x="233" y="76" key="#Project_Structure" timestamp="1592851710638">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="283" y="111" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840285380" />
-    <state x="2281" y="317" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592587128866" />
-    <state x="183" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592609733731">
+    <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851710638" />
+    <state width="1461" height="269" key="GridCell.Tab.0.bottom" timestamp="1592851720763">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="183" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609733731" />
-    <state x="558" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1592611175692">
+    <state width="1461" height="269" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720763" />
+    <state width="1461" height="269" key="GridCell.Tab.0.center" timestamp="1592851720762">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="558" y="217" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592611175692" />
-    <state x="483" y="291" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592608736675">
+    <state width="1461" height="269" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
+    <state width="1461" height="269" key="GridCell.Tab.0.left" timestamp="1592851720762">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="483" y="291" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592608736675" />
-    <state x="550" y="408" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592608133088">
+    <state width="1461" height="269" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
+    <state width="1461" height="269" key="GridCell.Tab.0.right" timestamp="1592851720762">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="550" y="408" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592608133088" />
-    <state x="418" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592610518060">
+    <state width="1461" height="269" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851720762" />
+    <state x="564" y="279" key="chooseDestDirectoryDialog" timestamp="1592851623847">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="418" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610518060" />
-    <state x="482" y="287" key="FileChooserDialogImpl" timestamp="1592609198085">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="482" y="287" key="FileChooserDialogImpl/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609198085" />
-    <state x="614" y="413" key="Github.Dialog.Accounts.Choose" timestamp="1592611462776">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592611462776" />
-    <state width="1461" height="269" key="GridCell.Tab.0.bottom" timestamp="1592840982884">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840982883" />
-    <state width="1461" height="269" key="GridCell.Tab.0.center" timestamp="1592840982883">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840982883" />
-    <state width="1461" height="269" key="GridCell.Tab.0.left" timestamp="1592840982883">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840982883" />
-    <state width="1461" height="269" key="GridCell.Tab.0.right" timestamp="1592840982883">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="269" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840982883" />
-    <state width="1461" height="332" key="GridCell.Tab.1.bottom" timestamp="1592610054374">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="332" key="GridCell.Tab.1.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610054374" />
-    <state width="1461" height="332" key="GridCell.Tab.1.center" timestamp="1592610054374">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="332" key="GridCell.Tab.1.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610054374" />
-    <state width="1461" height="332" key="GridCell.Tab.1.left" timestamp="1592610054374">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="332" key="GridCell.Tab.1.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610054374" />
-    <state width="1461" height="332" key="GridCell.Tab.1.right" timestamp="1592610054374">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state width="1461" height="332" key="GridCell.Tab.1.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610054374" />
-    <state x="356" y="322" width="792" height="635" key="Registry" timestamp="1592609925337">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="356" y="322" width="792" height="635" key="Registry/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609925337" />
-    <state x="254" y="146" key="SettingsEditor" timestamp="1592610121791">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="254" y="146" key="SettingsEditor/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592610121791" />
-    <state x="345" y="234" key="Vcs.Push.Dialog.v2" timestamp="1592611448008">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="345" y="234" key="Vcs.Push.Dialog.v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592611448008" />
-    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592840255632">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840255632" />
-    <state x="524" y="188" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592840245764">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="524" y="188" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592840245764" />
-    <state x="79" y="234" key="new project wizard" timestamp="1592609950063">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="79" y="234" key="new project wizard/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609950063" />
-    <state x="1926" y="354" key="new project wizard/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592590755157" />
-    <state x="409" y="231" width="672" height="677" key="run.anything.popup" timestamp="1592609250682">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="409" y="231" width="672" height="677" key="run.anything.popup/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609250682" />
-    <state x="415" y="216" width="672" height="678" key="search.everywhere.popup" timestamp="1592609873308">
-      <screen x="0" y="0" width="1504" height="1003" />
-    </state>
-    <state x="415" y="216" width="672" height="678" key="search.everywhere.popup/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592609873308" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jeopardy$QuestionClient.ic" NAME="QuestionClient Coverage Results" MODIFIED="1592609266369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.jeopardy.client.*</FILTER>
-    </SUITE>
+    <state x="564" y="279" key="chooseDestDirectoryDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851623847" />
   </component>
 </project>
