@@ -11,24 +11,19 @@ public class AdvancedPlayers extends Players {
   }
 
   @Override//implement superClass abstract method
-  public int calculateFinalScore() {
-    int finalScore = 0;
-    /*
-    calculate final score for each advancedPlayer
-    correct questions: add points
-    incorrect questions: deduct points
-     */
-    return finalScore;
+  public int deductScore(int currentQuestionValue) {
+    int score = getScore();
+    score -= currentQuestionValue;
+    return score;
   }
 
+  /*TODO:
+    implement interface askForHelp()
+ */
   @Override//implement interface abstract method
-  public int askForHelp() {
+  public int askForHelp(int currentQuestionValue) {
     int result = 0;
     System.out.println("Skip this question and no value added or subtracted!");
-    /*
-    Skip this question for advancedPlayer
-    no points add or deducted
-     */
     return result;
   }
 

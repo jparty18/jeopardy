@@ -5,6 +5,10 @@ package Players;
     private String name;
     private Expertise level;
 
+    private int score = 0;
+    private boolean isCorrect = true;
+
+
     //ctors
     public Players (){
 
@@ -16,7 +20,13 @@ package Players;
     }
 
     //business methods
-    public abstract int calculateFinalScore();
+    public int addScore(int currentQuestionValue) {
+      int score = getScore();
+      score += currentQuestionValue;
+      return score;
+    }
+
+    public abstract int deductScore(int currentQuestionValue);
 
     //accessor methods
     public String getName() {
@@ -33,7 +43,21 @@ package Players;
       this.level = level;
     }
 
-    //toString()
+    public int getScore() {
+      return score;
+    }
+    public void setScore(int score) {
+      this.score = score;
+    }
+
+    public boolean isCorrect() {
+      return isCorrect;
+    }
+    public void setCorrect(boolean correct) {
+      isCorrect = correct;
+    }
+
+   //toString()
     public String toString() {
       return getClass().getSimpleName() + ": name=" + getName() + " level=" + getLevel();
     }

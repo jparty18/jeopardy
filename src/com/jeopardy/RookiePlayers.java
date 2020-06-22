@@ -11,24 +11,19 @@ public class RookiePlayers extends Players {
   }
 
   @Override//implement superClass abstract method
-  public int calculateFinalScore() {
-    int finalScore = 0;
-    /*
-    calculate final score for each rookiePlayer
-    correct questions: add points
-    incorrect questions: no points deducted
-     */
-    return finalScore;
+  public int deductScore(int currentQuestionValue) {
+    int score = getScore();
+    return score;
   }
 
+  /*TODO:
+     implement interface askForHelp()
+   */
   @Override//implement interface abstract method
-  public int askForHelp() {
+  public int askForHelp(int currentQuestionValue) {
     int result = 0;
     System.out.println("Skip this question and value of this question automatically added!");
-    /*
-    Skip this question for rookiePlayer
-    points automatically added "for free"
-     */
+    result = result + currentQuestionValue;
     return result;
   }
 
