@@ -19,22 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/sample/Contestants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/sample/Questions.java" afterDir="false" />
+    <list default="true" id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="Board and Players">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Players.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Players.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Questions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/BoardFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/BoardFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Jeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Jeopardy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Players.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Players.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Questions.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +52,23 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.jeopardy" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Jeopardy">
-    <configuration name="BoardFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.BoardFactory" />
-      <module name="jeopardy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jeopardy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Jeopardy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.Jeopardy" />
       <module name="jeopardy" />
@@ -98,12 +82,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuestionTest.questionDisplayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="questionDisplayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionTest.testQuestionDisplayQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="testQuestionDisplayQuestion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionTest.testSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="testSession" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Jeopardy" />
-        <item itemvalue="Application.BoardFactory" />
+        <item itemvalue="JUnit.QuestionTest.testQuestionDisplayQuestion" />
+        <item itemvalue="JUnit.QuestionTest.testSession" />
+        <item itemvalue="JUnit.QuestionTest.questionDisplayTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\jai51\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,47 +172,78 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Board and Players" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board and Players" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2281" y="317" key="#Project_Structure" timestamp="1592842708807">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="233" y="76" key="#Project_Structure" timestamp="1592859019238">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="2281" y="317" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592842708807" />
-    <state x="2281" y="317" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592587128866" />
-    <state x="2317" y="422" key="#com.intellij.ide.util.MemberChooser" timestamp="1592845429317">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859019238" />
+    <state x="558" y="185" key="#com.intellij.ide.util.MemberChooser" timestamp="1592859322417">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="2317" y="422" key="#com.intellij.ide.util.MemberChooser/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592845429317" />
-    <state x="1995" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592845347837">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="558" y="185" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859322417" />
+    <state x="533" y="243" key="FileChooserDialogImpl" timestamp="1592852856563">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="1995" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592845347837" />
-    <state width="1335" height="409" key="GridCell.Tab.0.bottom" timestamp="1592864819272">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="533" y="243" key="FileChooserDialogImpl/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852856563" />
+    <state x="614" y="413" key="Github.Dialog.Accounts.Choose" timestamp="1592852145244">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1335" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819272" />
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707663" />
-    <state width="1335" height="409" key="GridCell.Tab.0.center" timestamp="1592864819271">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852145244" />
+    <state width="1461" height="270" key="GridCell.Tab.0.bottom" timestamp="1592861057758">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1335" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
-    <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707662" />
-    <state width="1335" height="409" key="GridCell.Tab.0.left" timestamp="1592864819271">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1461" height="270" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057758" />
+    <state width="1461" height="270" key="GridCell.Tab.0.center" timestamp="1592861057757">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1335" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
-    <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707662" />
-    <state width="1335" height="409" key="GridCell.Tab.0.right" timestamp="1592864819271">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1461" height="270" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
+    <state width="1461" height="270" key="GridCell.Tab.0.left" timestamp="1592861057757">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="1335" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
-    <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707663" />
-    <state x="1926" y="354" key="new project wizard" timestamp="1592590755157">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1461" height="270" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
+    <state width="1461" height="270" key="GridCell.Tab.0.right" timestamp="1592861057757">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="1926" y="354" key="new project wizard/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592590755157" />
-    <state x="2169" y="346" key="run.anything.popup" timestamp="1592844572377">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1461" height="270" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
+    <state x="392" y="263" key="MultipleFileMergeDialog" timestamp="1592852681844">
+      <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="2169" y="346" key="run.anything.popup/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592844572377" />
+    <state x="392" y="263" key="MultipleFileMergeDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852681844" />
+    <state x="254" y="146" key="SettingsEditor" timestamp="1592852826654">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="254" y="146" key="SettingsEditor/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852826654" />
+    <state x="345" y="234" key="Vcs.Push.Dialog.v2" timestamp="1592852131684">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="345" y="234" key="Vcs.Push.Dialog.v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852131684" />
+    <state x="564" y="279" key="chooseDestDirectoryDialog" timestamp="1592851623847">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="564" y="279" key="chooseDestDirectoryDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851623847" />
+    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592858882447">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592858882447" />
+    <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592852864801">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852864801" />
+    <state x="524" y="176" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592858865881">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="524" y="176" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592858865881" />
+    <state x="583" y="292" key="svn.repositoryBrowser" timestamp="1592852859879">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="583" y="292" key="svn.repositoryBrowser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852859879" />
+    <state x="570" y="275" key="svn4idea.import.options" timestamp="1592852858437">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="570" y="275" key="svn4idea.import.options/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852858437" />
   </component>
 </project>
