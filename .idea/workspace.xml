@@ -20,20 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daf841bd-b3bc-4f9c-8011-2954c2afdcfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Players.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Questions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/sample/Contestants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/jeopardy/sample/Questions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Assistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Assistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Players.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Players.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Questions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jeopardy/BoardFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/BoardFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Expertise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Expertise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/RookiePlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/RookiePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Jeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Jeopardy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Players.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Players.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/client/Questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/client/Questions.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,22 +134,26 @@
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="1995" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592845347837" />
-    <state width="1382" height="409" key="GridCell.Tab.0.bottom" timestamp="1592848531403">
+    <state width="1335" height="409" key="GridCell.Tab.0.bottom" timestamp="1592864819272">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
-    <state width="1382" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592848531403" />
-    <state width="1382" height="409" key="GridCell.Tab.0.center" timestamp="1592848531402">
+    <state width="1335" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819272" />
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707663" />
+    <state width="1335" height="409" key="GridCell.Tab.0.center" timestamp="1592864819271">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
-    <state width="1382" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592848531402" />
-    <state width="1382" height="409" key="GridCell.Tab.0.left" timestamp="1592848531401">
+    <state width="1335" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
+    <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707662" />
+    <state width="1335" height="409" key="GridCell.Tab.0.left" timestamp="1592864819271">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
-    <state width="1382" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592848531401" />
-    <state width="1382" height="409" key="GridCell.Tab.0.right" timestamp="1592848531402">
+    <state width="1335" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
+    <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707662" />
+    <state width="1335" height="409" key="GridCell.Tab.0.right" timestamp="1592864819271">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
-    <state width="1382" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592848531402" />
+    <state width="1335" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592864819271" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1592856707663" />
     <state x="1926" y="354" key="new project wizard" timestamp="1592590755157">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>

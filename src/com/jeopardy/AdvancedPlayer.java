@@ -6,6 +6,14 @@ public class AdvancedPlayer extends Player {
     super(name, level);
   }
 
+  // business methods
+  // int addPoints(int points);
+  // setScore(getScore() + points);
+  // return getScore();
+  // int deductPoints(int points);
+  // int finalScore() -> getScore();
+
+
   @Override//implement superClass abstract method
   public int calculateFinalScore() {
     int finalScore = 0;

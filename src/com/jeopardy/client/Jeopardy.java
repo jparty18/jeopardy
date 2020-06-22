@@ -2,63 +2,19 @@ package com.jeopardy.client;
 
 import com.jeopardy.Board;
 import com.jeopardy.BoardFactory;
+import com.jeopardy.Player;
+import com.jeopardy.sample.Contestants;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Jeopardy {
-  private static final String COMMA_DELIMITER = ",";
 
   public static void main(String[] args) {
     int session = 0;
     int numberPlayers = 0;
+    int difficulty = 0;
     boolean validInputs = false;
-    BufferedReader names = null;
-    BufferedReader questions = null;
-    List<String> contestants = new ArrayList<>();
-
-    try {
-      names = new BufferedReader(new FileReader("Players.csv"));
-      questions = new BufferedReader(new FileReader("Players.csv"));
-      String line = "";
-
-      while ((line = names.readLine()) != null)
-      {
-        String[] contestant = line.split(COMMA_DELIMITER);
-
-        if(contestant.length > 0 )
-        {
-          String name = contestant[0];
-          contestants.add(name);
-        }
-      }
-
-      for(String name : contestants)
-      {
-        System.out.println(name);
-      }
-
-    } catch (FileNotFoundException e) {
-      e.getMessage();
-    } catch (IOException ioE) {
-      ioE.getStackTrace();
-    } finally {
-//      try
-//      {
-//        names.close();
-//      }
-//      catch(IOException ioE)
-//      {
-//        System.out.println("Error: Failed to close the BufferedReader");
-//        ioE.printStackTrace();
-//      }
-    }
 
     while(!validInputs) {
       try {
@@ -67,25 +23,52 @@ public class Jeopardy {
         session = input.nextInt();
         System.out.print("Enter the number of players: ");
         numberPlayers = input.nextInt();
+        System.out.println("Select a mode: ");
+        System.out.println("1: Easy");
+        System.out.println("2: Hard");
+        difficulty = input.nextInt();
         validInputs = true;
       } catch (InputMismatchException e) {
         System.out.println("Please enter a valid input: an integer");
       }
     }
 
-    // TODO: delete the manual adding process once csv reader implementation's complete
-    contestants.add("Joe");
-    contestants.add("Wei");
-    contestants.add("Wonil");
-
-
-    Board newGame = BoardFactory.createBoard(session, numberPlayers, contestants);
+    Board newGame = BoardFactory.createBoard(session, numberPlayers, difficulty);
 
     System.out.println("\nWelcome to the J-PARTY!");
 
-    StringBuilder intro = new StringBuilder("Tonight's contestants are ");
-    // contestants.append("");
+    StringBuilder intro = new StringBuilder("Tonight's contestants are: " + "\n");
+    List<Player> contestants = Contestants.getContestants(numberPlayers);
+    for (Player p : contestants) {
+      intro.append(p.getName() + "\n");
+    }
     System.out.println(intro);
+
+    System.out.println("Press enter to begin");
+    Scanner wait = new Scanner(System.in);
+    wait.nextLine();
+
+    System.out.println("Our first guest is: ");
+    String name = contestants.get(new Random().nextInt(numberPlayers - 1)).getName();
+
+    // TODO: display available questions
+    // user can choose $ value & question
+
+    System.out.println(name + ", please choose a question.");
+    wait.nextLine();
+
+
+    // attempt: 1, isDailyDouble?
+
+//    for (int i = 0; i < 4; i++) {
+//      System.out.print("-----------------------" + "          ");
+//      System.out.print("\n" + "|       $100           |" + "          ");
+//    }
+
+    // closing comment
+
+    // restart or exit?
+
 
   }
 }
