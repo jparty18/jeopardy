@@ -16,7 +16,7 @@ public class Jeopardy {
     int difficulty = 0;
     boolean validInputs = false;
 
-    while(!validInputs) {
+    while (!validInputs) {
       try {
         Scanner input = new Scanner(System.in);
         System.out.print("Select a category: ");
@@ -68,7 +68,5 @@ public class Jeopardy {
     // closing comment
 
     // restart or exit?
-
-
   }
 }

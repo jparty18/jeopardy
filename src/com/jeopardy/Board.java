@@ -1,6 +1,7 @@
 package com.jeopardy;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class Board {
@@ -15,7 +16,6 @@ public class Board {
     // stream filters session == question.session
 
 
-
   }
 
   private List<String> contestants = new ArrayList<>();
@@ -23,8 +23,5 @@ public class Board {
   // Business Methods
   // Select a $ value => print available questions
   // user selects a question => print the question and wait
-
-
-
-
 }
+
