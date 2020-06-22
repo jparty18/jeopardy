@@ -27,6 +27,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="https://github.com/jai515/jeopardy.git" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,15 +46,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.jeopardy" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.QuestionTest.testQuestionDisplayQuestion">
     <configuration name="Jeopardy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.Jeopardy" />
       <module name="jeopardy" />
@@ -61,8 +82,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuestionTest.questionDisplayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="questionDisplayTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionTest.testQuestionDisplayQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="testQuestionDisplayQuestion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionTest.testSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
+      <option name="METHOD_NAME" value="testSession" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QuestionTest.testQuestionDisplayQuestion" />
+        <item itemvalue="JUnit.QuestionTest.testSession" />
+        <item itemvalue="JUnit.QuestionTest.questionDisplayTest" />
         <item itemvalue="Application.Jeopardy" />
       </list>
     </recent_temporary>
@@ -104,10 +176,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Board and Players" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="76" key="#Project_Structure" timestamp="1592851710638">
+    <state x="233" y="76" key="#Project_Structure" timestamp="1592859019238">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851710638" />
+    <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859019238" />
+    <state x="558" y="185" key="#com.intellij.ide.util.MemberChooser" timestamp="1592859322417">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="558" y="185" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859322417" />
     <state x="533" y="243" key="FileChooserDialogImpl" timestamp="1592852856563">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
@@ -116,22 +192,22 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852145244" />
-    <state width="730" height="269" key="GridCell.Tab.0.bottom" timestamp="1592852837787">
+    <state width="1461" height="270" key="GridCell.Tab.0.bottom" timestamp="1592861057758">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="730" height="269" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837787" />
-    <state width="730" height="269" key="GridCell.Tab.0.center" timestamp="1592852837786">
+    <state width="1461" height="270" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057758" />
+    <state width="1461" height="270" key="GridCell.Tab.0.center" timestamp="1592861057757">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="730" height="269" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837786" />
-    <state width="730" height="269" key="GridCell.Tab.0.left" timestamp="1592852837786">
+    <state width="1461" height="270" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
+    <state width="1461" height="270" key="GridCell.Tab.0.left" timestamp="1592861057757">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="730" height="269" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837786" />
-    <state width="730" height="269" key="GridCell.Tab.0.right" timestamp="1592852837787">
+    <state width="1461" height="270" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
+    <state width="1461" height="270" key="GridCell.Tab.0.right" timestamp="1592861057757">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state width="730" height="269" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852837787" />
+    <state width="1461" height="270" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
     <state x="392" y="263" key="MultipleFileMergeDialog" timestamp="1592852681844">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
@@ -148,10 +224,18 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="564" y="279" key="chooseDestDirectoryDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851623847" />
+    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592858882447">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592858882447" />
     <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592852864801">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852864801" />
+    <state x="524" y="176" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592858865881">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="524" y="176" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592858865881" />
     <state x="583" y="292" key="svn.repositoryBrowser" timestamp="1592852859879">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
