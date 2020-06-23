@@ -77,8 +77,10 @@ public class Board {
     return result.toString();
   }
 
-  // Business Methods
-  // Select a $ value => print available questions
-  // user selects a question => print the question and wait
+  public static void clearScreen() {
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
+  }
+
 }
 

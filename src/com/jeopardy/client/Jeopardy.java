@@ -36,6 +36,8 @@ public class Jeopardy {
 
     Board newGame = BoardFactory.createBoard(session, numberPlayers, difficulty);
 
+    // TODO: clear the console window
+    newGame.clearScreen();
     System.out.println("\nWelcome to the J-PARTY!");
 
     StringBuilder intro = new StringBuilder("Tonight's contestants are: " + "\n");
@@ -48,7 +50,9 @@ public class Jeopardy {
 
 
 
-    boolean firstQuestion = true;    while (newGame.getQuestions().size() > 0) {
+    boolean firstQuestion = true;
+
+    while (newGame.getQuestions().size() > 0) {
       String currentPlayer = newGame.getAPlayerName();
       System.out.println("Our guest is: " + currentPlayer);
       System.out.println(currentPlayer + ", please choose a question.");
@@ -57,9 +61,14 @@ public class Jeopardy {
       int dollarValue = wait.nextInt();
       newGame.getAQuestion(dollarValue).displayQuestion();
 
+      // TODO: display answer choices
+      // 1: correct answer 2: tricky answer 3: bs
       int answer = wait.nextInt();
+
+      // TODO: process score for the player
     }
 
+    // TODO: option to replay or exit
     System.out.println("Thank you for playing. See you next time!");
   }
 }

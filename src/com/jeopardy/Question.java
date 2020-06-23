@@ -36,7 +36,7 @@ public class Question {
 
     //business methods
     public void displayQuestion(){
-        StringBuilder questionDisplay = new StringBuilder("\n" + "$" + getDollarValue() + ": ");
+        StringBuilder questionDisplay = new StringBuilder("\n" + "For $" + getDollarValue() + ": ");
 
         if(isDailyDouble){
             questionDisplay.append("\n" + "\u001B[44m \n \u001B[41m \u001B[30m" +
