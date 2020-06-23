@@ -58,7 +58,7 @@ public class Jeopardy {
       Question currentQuestion = newGame.getAQuestion(dollarValue);
       currentQuestion.displayQuestion();
 
-      // TODO: display answer choices
+      // DONE: display answer choices
       newGame.showAnswerChoices(currentQuestion);
       // 1: correct answer 2: tricky answer 3: bs
       int answer = wait.nextInt();
