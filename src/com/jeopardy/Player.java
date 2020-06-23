@@ -14,6 +14,7 @@ package com.jeopardy;
     public int addScore(int currentQuestionValue) {
       int score = getScore();
       score += currentQuestionValue;
+      this.setScore(score);
       return score;
     }
 
