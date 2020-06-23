@@ -2,30 +2,25 @@ package com.jeopardy;
 
 public class AdvancedPlayer extends Player {
 
+  public AdvancedPlayer(String name) {
+    super(name);
+  }
+
   public AdvancedPlayer(String name, Expertise level) {
-    super(name, level);
+    this(name);
+    setLevel(level);
   }
 
   // business methods
-  // int addPoints(int points);
-  // setScore(getScore() + points);
-  // return getScore();
-  // int deductPoints(int points);
-  // int finalScore() -> getScore();
-
-
-  @Override//implement superClass abstract method
-  public int calculateFinalScore() {
-    int finalScore = 0;
-    /*
-    calculate final score for each advancedPlayer
-    correct questions: add points
-    incorrect questions: deduct points
-     */
-    return finalScore;
+  //implement interface abstract method
+  @Override
+  public int deductScore(int currentQuestionValue) {
+    int score = getScore();
+    score -= currentQuestionValue;
+    return score;
   }
 
-  @Override//implement interface abstract method
+  @Override
   public int askForHelp() {
     int result = 0;
     System.out.println("Skip this question and no value added or subtracted!");

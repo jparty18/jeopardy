@@ -2,19 +2,13 @@ package com.jeopardy;
 
 public class RookiePlayer extends Player {
 
-  public RookiePlayer(String name, Expertise level) {
-    super(name, level);
+  public RookiePlayer(String name) {
+    super(name);
   }
 
-  @Override//implement superClass abstract method
-  public int calculateFinalScore() {
-    int finalScore = 0;
-    /*
-    calculate final score for each rookiePlayer
-    correct questions: add points
-    incorrect questions: no points deducted
-     */
-    return finalScore;
+  public RookiePlayer(String name, Expertise level) {
+    this(name);
+    setLevel(level);
   }
 
   @Override//implement interface abstract method

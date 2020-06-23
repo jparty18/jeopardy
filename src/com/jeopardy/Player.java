@@ -6,13 +6,21 @@ package com.jeopardy;
     private int score = 0;
     private Expertise level;
 
-    public Player(String name, Expertise level) {
+    public Player(String name) {
       setName(name);
-      setLevel(level);
     }
 
     //business methods
-    public abstract int calculateFinalScore();
+    public int addScore(int currentQuestionValue) {
+      int score = getScore();
+      score += currentQuestionValue;
+      return score;
+    }
+
+    public int deductScore(int currentQuestionValue) {
+      // do nothing
+      return getScore();
+    };
 
     //accessor methods
     public String getName() {

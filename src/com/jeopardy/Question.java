@@ -4,53 +4,58 @@ import java.util.Objects;
 
 public class Question {
 
-    private boolean isSelected = false;
     private boolean isDailyDouble = false;
+    private boolean isTrueFalse = false;
     private int session;
     private String questionContent;
+    private String answer;
     private int dollarValue;
 
     //ctor
-    public Question(int session, String questionContent, int dollarValue) {
+    private Question (int session, String questionContent, int dollarValue) {
         setSession(session);
         setQuestionContent(questionContent);
         setDollarValue(dollarValue);
-        setDailyDouble(false);
+        setDailyDouble();
+    }
+
+    public Question(int session, String questionContent, int dollarValue, String answer) {
+        this(session, questionContent, dollarValue);
+        setAnswer(answer);
+    }
+
+    public Question(int session, String questionContent, int dollarValue, boolean answer) {
+        this(session, questionContent, dollarValue);
+        isTrueFalse = true;
+        if (answer) {
+            setAnswer("True");
+        } else {
+            setAnswer("False");
+        }
     }
 
     //business methods
     public void displayQuestion(){
-        String questionDisplay = "$" + getDollarValue();
-        if(isSelected()){
-            questionDisplay = "For $" + getDollarValue() +": " + questionContent;
-        }
-        if(isDailyDouble() && isSelected()){
-            questionDisplay =("\u001B[44m \n \u001B[41m \u001B[30m" +
+        StringBuilder questionDisplay = new StringBuilder("\n" + "$" + getDollarValue() + ": ");
+
+        if(isDailyDouble){
+            questionDisplay.append("\n" + "\u001B[44m \n \u001B[41m \u001B[30m" +
                     "*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*  D-A-I-L-Y   D-O-U-B-L-E  *$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*" +
                     "\n\u001B[44m" + "\n\u001B[0m" +
                     "For $" + getDollarValue()*2 + ": " + questionContent);
+        } else {
+            questionDisplay.append(getQuestionContent());
         }
-        System.out.println(questionDisplay);
+        System.out.println(questionDisplay.toString());
     }
 
     //Accessor methods
-    public boolean isSelected() {
-        return isSelected;
-    }
-
-    public void setSelected(boolean selected) {
-        isSelected = selected;
-    }
-
     public boolean isDailyDouble() {
         return isDailyDouble;
     }
 
-    public void setDailyDouble(boolean dailyDouble) {
-        if(Math.random() < 0.11){
-            isDailyDouble = true;
-        }
-        if(dailyDouble){
+    public void setDailyDouble() {
+        if(Math.random() < 0.26){
             isDailyDouble = true;
         }
     }
@@ -69,6 +74,11 @@ public class Question {
 
     public void setQuestionContent(String questionContent) {
         this.questionContent = questionContent;
+    }
+
+    public String getAnswer() { return answer; }
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public int getDollarValue() {
