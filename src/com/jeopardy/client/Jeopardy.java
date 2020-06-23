@@ -63,8 +63,12 @@ public class Jeopardy {
       // 1: correct answer 2: tricky answer 3: bs
       int answer = wait.nextInt();
 
-      // TODO: process score for the player
-      // TODO: Display scores
+      // DONE: process score for the player
+      newGame.processScore(true, currentPlayer, dollarValue);
+
+
+      // DONE: display scores
+      newGame.displayScores();
     }
 
     // TODO: option to replay or exit

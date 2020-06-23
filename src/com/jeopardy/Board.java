@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Board {
   private int numberOfPlayers = 0;
@@ -89,6 +91,38 @@ public class Board {
       count ++;
     }
     return result.toString();
+  }
+
+  public void processScore(boolean isCorrect, String playerName, int dollarValue){
+    //get contestant by name, loop through contestants list
+    Player currentPlayer = null;
+    for(Player player: getContestants()){
+      if(player.getName().equals(playerName)){
+        currentPlayer = player;
+        break;
+      }
+    }
+
+    //check isCorrect, increase for correct, decrease for incorrect
+    if(isCorrect){
+      currentPlayer.addScore(dollarValue);
+    }
+    else{
+      currentPlayer.deductScore(dollarValue);
+    }
+    System.out.println(currentPlayer.getScore());
+  }
+
+
+  public void displayScores(){
+    StringBuilder scores = new StringBuilder("The scores are: ");
+
+    // append player names and scores
+    for(Player player: getContestants()){
+      scores.append(" | " + player.getName()+ " : " + player.getScore() + " | ");
+    }
+    System.out.println(scores);
+
   }
 
   public static void clearScreen() {
