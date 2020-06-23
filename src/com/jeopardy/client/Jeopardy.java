@@ -46,16 +46,14 @@ public class Jeopardy {
     Scanner wait = new Scanner(System.in);
     wait.nextLine();
 
-    boolean firstQuestion = true;
-
     while (newGame.getQuestions().size() > 0) {
-      String currentPlayer = newGame.getAPlayerName();
-      System.out.println("Our guest is: " + currentPlayer);
+      String currentPlayer = newGame.getPlayerName();
+      System.out.println("\n"+ "Our guest is: " + currentPlayer);
       System.out.println(currentPlayer + ", please choose a question.");
 
       System.out.println(newGame.getAllQuestion());
       int dollarValue = wait.nextInt();
-      Question currentQuestion = newGame.getAQuestion(dollarValue);
+      Question currentQuestion = newGame.getQuestion(dollarValue);
       currentQuestion.displayQuestion();
 
       // DONE: display answer choices
@@ -64,7 +62,8 @@ public class Jeopardy {
       int answer = wait.nextInt();
 
       // DONE: process score for the player
-      newGame.processScore(true, currentPlayer, dollarValue);
+      dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
+      newGame.processScore(newGame.checkAnswer(answer), currentPlayer, dollarValue);
 
 
       // DONE: display scores
