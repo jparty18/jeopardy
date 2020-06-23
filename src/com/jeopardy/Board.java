@@ -2,6 +2,7 @@ package com.jeopardy;
 
 import com.jeopardy.sample.Contestants;
 import com.jeopardy.sample.Questions;
+import org.w3c.dom.ls.LSOutput;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class Board {
   private int numberOfPlayers = 0;
-  private int currentAnswerindex;
+  private int currentAnswerIndex;
   private List<Player> contestants;
   private List<Question> questions;
   private List<String> answers = new ArrayList<>();
@@ -54,7 +55,7 @@ public class Board {
     setAnswers(questions);
   }
 
-  public String getAPlayerName() {
+  public String getPlayerName() {
     return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1)).getName();
   }
 
@@ -66,7 +67,7 @@ public class Board {
     return names.toString();
   }
 
-  public Question getAQuestion(int dollarValue) {
+  public Question getQuestion(int dollarValue) {
     Question result = null;
     boolean set = false;
     for (int i = 0; i < questions.size(); i++) {
@@ -110,7 +111,7 @@ public class Board {
     else{
       currentPlayer.deductScore(dollarValue);
     }
-    System.out.println(currentPlayer.getScore());
+    System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
   }
 
 
@@ -139,11 +140,17 @@ public class Board {
     for (String a : answers) {
       System.out.print(count + ": " + a + "\t" + "\t");
       if (a.equals(answer)) {
-        currentAnswerindex = count;
+        currentAnswerIndex = count;
       }
       count ++;
     }
     System.out.print("\n" + "Your answer: ");
+  }
+
+  public boolean checkAnswer(int answer) {
+    boolean result = answer == currentAnswerIndex;
+    System.out.print(result ? "Correct!" : "Hmm... I don't think so.");
+    return result;
   }
 }
 
