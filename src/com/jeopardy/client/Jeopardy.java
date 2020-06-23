@@ -2,10 +2,8 @@ package com.jeopardy.client;
 
 import com.jeopardy.Board;
 import com.jeopardy.BoardFactory;
-import com.jeopardy.Player;
-import com.jeopardy.sample.Contestants;
+import com.jeopardy.Question;
 
-import java.io.*;
 import java.util.*;
 
 public class Jeopardy {
@@ -48,8 +46,6 @@ public class Jeopardy {
     Scanner wait = new Scanner(System.in);
     wait.nextLine();
 
-
-
     boolean firstQuestion = true;
 
     while (newGame.getQuestions().size() > 0) {
@@ -59,13 +55,16 @@ public class Jeopardy {
 
       System.out.println(newGame.getAllQuestion());
       int dollarValue = wait.nextInt();
-      newGame.getAQuestion(dollarValue).displayQuestion();
+      Question currentQuestion = newGame.getAQuestion(dollarValue);
+      currentQuestion.displayQuestion();
 
       // TODO: display answer choices
+      newGame.showAnswerChoices(currentQuestion);
       // 1: correct answer 2: tricky answer 3: bs
       int answer = wait.nextInt();
 
       // TODO: process score for the player
+      // TODO: Display scores
     }
 
     // TODO: option to replay or exit

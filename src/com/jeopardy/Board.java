@@ -3,6 +3,7 @@ package com.jeopardy;
 import com.jeopardy.sample.Contestants;
 import com.jeopardy.sample.Questions;
 
+import java.sql.Array;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -10,8 +11,10 @@ import java.util.Random;
 
 public class Board {
   private int numberOfPlayers = 0;
+  private int currentAnswerindex;
   private List<Player> contestants;
   private List<Question> questions;
+  private List<String> answers = new ArrayList<>();
 
   public int getNumberOfPlayers() { return numberOfPlayers; }
   private void setNumberOfPlayers(int numberOfPlayers) {
@@ -28,6 +31,14 @@ public class Board {
     this.questions = questions;
   }
 
+  public List<String> getAnswers() { return answers; }
+
+  public void setAnswers(List<Question> questions) {
+    for (Question q : questions) {
+      answers.add(q.getAnswer());
+    }
+  }
+
   Board(int session, int numberOfPlayers, int difficulty) {
     // TODO: pass difficulty to Player ctor
     Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
@@ -35,7 +46,10 @@ public class Board {
     setContestants(Contestants.getContestants(numberOfPlayers));
     setNumberOfPlayers(numberOfPlayers);
 
-    setQuestions(Questions.getQuestions(session));
+    // set questions and answers
+    List<Question> questions = Questions.getQuestions(session);
+    setQuestions(questions);
+    setAnswers(questions);
   }
 
   public String getAPlayerName() {
@@ -82,5 +96,20 @@ public class Board {
     System.out.flush();
   }
 
+  public void showAnswerChoices(Question currentQuestion) {
+    List<String> choices = new ArrayList<>();
+    String answer = currentQuestion.getAnswer();
+
+    int index = new Random().nextInt(3);
+    int count = 1;
+    for (String a : answers) {
+      System.out.print(count + ": " + a + "\t" + "\t");
+      if (a.equals(answer)) {
+        currentAnswerindex = count;
+      }
+      count ++;
+    }
+    System.out.print("\n" + "Your answer: ");
+  }
 }
 
