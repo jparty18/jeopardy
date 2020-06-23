@@ -91,11 +91,12 @@ public class Board {
 
     //check isCorrect, increase for correct, decrease for incorrect
     if(isCorrect){
-      currentPlayer.setScore(currentPlayer.getScore() + dollarValue);
+      currentPlayer.addScore(dollarValue);
     }
     else{
-      currentPlayer.setScore(currentPlayer.getScore() - dollarValue);
+      currentPlayer.deductScore(dollarValue);
     }
+    System.out.println(currentPlayer.getScore());
   }
 
 
