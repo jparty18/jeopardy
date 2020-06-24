@@ -52,6 +52,7 @@ public class Jeopardy {
       System.out.println(currentPlayer + ", please choose a question.");
 
       System.out.println(newGame.getAllQuestion());
+      System.out.print("Choose a dollar value: $");
       int dollarValue = wait.nextInt();
       Question currentQuestion = newGame.getQuestion(dollarValue);
       currentQuestion.displayQuestion();
@@ -69,6 +70,8 @@ public class Jeopardy {
       // DONE: display scores
       newGame.displayScores();
     }
+    // DONE: display final score
+    newGame.displayFinalScores();
 
     // TODO: option to replay or exit
     System.out.println("Thank you for playing. See you next time!");

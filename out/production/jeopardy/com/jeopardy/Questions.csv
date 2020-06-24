@@ -6,4 +6,4 @@
 2,A class (or type) is a __________ for objects,200,blueprint
 2,An _______ is an actual object of some type,200,instance
 2,Every object instance has a type,300,true
-2,Fields can be initialized with values and numerics have default values of null,300,false
+2,Fields can be initialized with values and numerics have default value of null,300,false

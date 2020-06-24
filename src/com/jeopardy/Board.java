@@ -9,10 +9,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.sql.Array;
-import java.util.ArrayList;
+import java.util.*;
 
-import java.util.List;
-import java.util.Random;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -155,11 +153,11 @@ public class Board {
     //check isCorrect, increase for correct, decrease for incorrect
     if(isCorrect){
       currentPlayer.addScore(dollarValue);
+      System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
     }
     else{
       currentPlayer.deductScore(dollarValue);
     }
-    System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
   }
 
 
@@ -171,7 +169,20 @@ public class Board {
       scores.append(" | " + player.getName()+ " : " + player.getScore() + " | ");
     }
     System.out.println(scores);
+  }
 
+  public void displayFinalScores() {
+    for (int i = 0; i < 50; i++) {
+      System.out.println("\n");
+    }
+    System.out.println("\n" + "\u001B[44m \n \u001B[41m \u001B[30m" +
+            "*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*  F-I-N-A-L   S-C-O-R-E  *$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*" +
+            "\n\u001B[44m" + "\n\u001B[0m" );
+    getContestants().stream()
+            .sorted(Comparator.comparing(Player::getScore).reversed())
+            .forEach(p -> {
+              System.out.println(p.getName() +": " + p.getScore());
+            });
   }
 
   public static void clearScreen() {
@@ -197,7 +208,8 @@ public class Board {
 
   public boolean checkAnswer(int answer) {
     boolean result = answer == currentAnswerIndex;
-    System.out.print(result ? "Correct!" : "Hmm... I don't think so.");
+    System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
+    System.out.println("\n");
     return result;
   }
 
@@ -213,7 +225,5 @@ public class Board {
 
     return results;
   }
-
-
 }
 

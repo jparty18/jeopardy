@@ -17,6 +17,7 @@ public class AdvancedPlayer extends Player {
   public int deductScore(int currentQuestionValue) {
     int score = getScore();
     score -= currentQuestionValue;
+    setScore(score);
     return score;
   }
 
