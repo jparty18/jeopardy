@@ -4,7 +4,6 @@ package com.jeopardy;
     //instance variables
     private String name;
     private int score = 0;
-    private Expertise level;
 
     public Player(String name) {
       setName(name);
@@ -34,16 +33,9 @@ package com.jeopardy;
     public int getScore() { return score; }
     public void setScore(int score) { this.score = score; }
 
-    public Expertise getLevel() {
-      return level;
-    }
-    public void setLevel(Expertise level) {
-      this.level = level;
-    }
-
     //toString()
     public String toString() {
-      return getClass().getSimpleName() + ": name=" + getName() + " level=" + getLevel();
+      return getClass().getSimpleName() + ": name=" + getName();
     }
 
 }

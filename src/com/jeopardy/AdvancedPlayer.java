@@ -6,11 +6,6 @@ public class AdvancedPlayer extends Player {
     super(name);
   }
 
-  public AdvancedPlayer(String name, Expertise level) {
-    this(name);
-    setLevel(level);
-  }
-
   // business methods
   //implement interface abstract method
   @Override

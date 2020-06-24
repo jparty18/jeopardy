@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class TFQuestion extends Question {
-
     private int currentAnswerIndex;
 
     public TFQuestion(int session, String questionContent, int dollarValue, boolean answer) {
@@ -25,19 +24,10 @@ public class TFQuestion extends Question {
             }
             System.out.print(count + ": " + a + "\t" + "\t");
             if (a.equals(answer)) {
-                currentAnswerIndex = count;
+                super.currentAnswerIndex = count;
             }
             count ++;
         }
         System.out.print("\n" + "Your answer: ");
     }
-
-    public boolean checkAnswer(int answer) {
-        boolean result = answer == currentAnswerIndex;
-        System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
-        System.out.println("\n");
-        return result;
-    }
-
-
 }

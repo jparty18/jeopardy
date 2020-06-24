@@ -11,6 +11,7 @@ public abstract class Question {
     private String questionContent;
     private String answer;
     private int dollarValue;
+    int currentAnswerIndex;
 
     //ctor
     private Question (int session, String questionContent, int dollarValue) {
@@ -51,7 +52,12 @@ public abstract class Question {
     }
 
     public abstract void showAnswerChoices(List<String> answers);
-    public abstract boolean checkAnswer(int answer);
+    public boolean checkAnswer(int answer) {
+        boolean result = answer == currentAnswerIndex;
+        System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
+        System.out.println("\n");
+        return result;
+    };
 
     //Accessor methods
     public boolean isDailyDouble() {

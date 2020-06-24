@@ -37,14 +37,13 @@ public class Board {
     List<Player> result = new ArrayList<>();
     playerStream.forEach(line -> {
       String[] namesArr = line.split(",");
-      Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
 
       // DONE: pass difficulty to Player ctor
       for (String name : namesArr) {
         if (difficulty == 1) {
-          result.add(new RookiePlayer(name, expertise));
+          result.add(new RookiePlayer(name));
         } else {
-          result.add(new AdvancedPlayer(name, expertise));
+          result.add(new AdvancedPlayer(name));
         }
       }
     });

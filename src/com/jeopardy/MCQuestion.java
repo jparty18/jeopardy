@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class MCQuestion extends Question {
-    private int currentAnswerIndex;
 
     public MCQuestion(int session, String questionContent, int dollarValue, String answer) {
         super(session, questionContent, dollarValue, answer);
@@ -24,17 +23,10 @@ public class MCQuestion extends Question {
             }
             System.out.print(count + ": " + a + "\t" + "\t");
             if (a.equals(answer)) {
-                currentAnswerIndex = count;
+                super.currentAnswerIndex = count;
             }
             count ++;
         }
         System.out.print("\n" + "Your answer: ");
-    }
-
-    public boolean checkAnswer(int answer) {
-        boolean result = answer == currentAnswerIndex;
-        System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
-        System.out.println("\n");
-        return result;
     }
 }

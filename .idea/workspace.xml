@@ -185,16 +185,25 @@
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="2373" y="601" key="#Notifications/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592982845024" />
-    <state x="233" y="76" key="#Project_Structure" timestamp="1592859019238">
-      <screen x="0" y="0" width="1504" height="1003" />
+    <state x="2189" y="130" key="#Project_Structure" timestamp="1593023947006">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859019238" />
+    <state x="2189" y="130" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023947006" />
     <state x="2742" y="284" key="#com.intellij.ide.util.MemberChooser" timestamp="1592929733225">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="558" y="185" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859322417" />
     <state x="2742" y="284" key="#com.intellij.ide.util.MemberChooser/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592891864565" />
     <state x="2742" y="284" key="#com.intellij.ide.util.MemberChooser/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592929733225" />
+    <state x="2539" y="266" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1593023902170">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2539" y="266" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023902170" />
+    <state x="2486" y="431" key="DetectedRootsChooserDialog" timestamp="1593023860195">
+      <screen x="1792" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2486" y="431" key="DetectedRootsChooserDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023860195" />
     <state x="533" y="243" key="FileChooserDialogImpl" timestamp="1592852856563">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
@@ -256,10 +265,11 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="564" y="279" key="chooseDestDirectoryDialog/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592851623847" />
-    <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592858882447">
-      <screen x="0" y="0" width="1504" height="1003" />
+    <state x="2623" y="578" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593023928179">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="488" y="393" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592858882447" />
+    <state x="2623" y="578" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023928179" />
     <state x="562" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592852864801">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>

@@ -6,11 +6,6 @@ public class RookiePlayer extends Player {
     super(name);
   }
 
-  public RookiePlayer(String name, Expertise level) {
-    this(name);
-    setLevel(level);
-  }
-
   @Override//implement interface abstract method
   public int askForHelp() {
     int result = 0;
