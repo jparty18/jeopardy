@@ -33,47 +33,11 @@ public class Jeopardy {
     }
 
     Board newGame = BoardFactory.createBoard(session, numberPlayers, difficulty);
-
+    newGame.start();
     // TODO: clear the console window
-    newGame.clearScreen();
-    System.out.println("\nWelcome to the J-PARTY!");
-
-    StringBuilder intro = new StringBuilder("Tonight's contestants are: " + "\n");
-    intro.append(newGame.getAllPlayers());
-    System.out.println(intro);
-
-    System.out.println("Press enter to begin");
-    Scanner wait = new Scanner(System.in);
-    wait.nextLine();
-
-    while (newGame.getQuestions().size() > 0) {
-      String currentPlayer = newGame.getPlayerName();
-      System.out.println("\n"+ "Our guest is: " + currentPlayer);
-      System.out.println(currentPlayer + ", please choose a question.");
-
-      System.out.println(newGame.getAllQuestion());
-      System.out.print("Choose a dollar value: $");
-      int dollarValue = wait.nextInt();
-      Question currentQuestion = newGame.getQuestion(dollarValue);
-      currentQuestion.displayQuestion();
-
-      // DONE: display answer choices
-      newGame.showAnswerChoices(currentQuestion);
-      // 1: correct answer 2: tricky answer 3: bs
-      int answer = wait.nextInt();
-
-      // DONE: process score for the player
-      dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
-      newGame.processScore(newGame.checkAnswer(answer), currentPlayer, dollarValue);
 
 
-      // DONE: display scores
-      newGame.displayScores();
-    }
-    // DONE: display final score
-    newGame.displayFinalScores();
 
-    // TODO: option to replay or exit
-    System.out.println("Thank you for playing. See you next time!");
+
   }
 }
