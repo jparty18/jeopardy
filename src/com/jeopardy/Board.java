@@ -4,6 +4,10 @@ import com.jeopardy.sample.Contestants;
 import com.jeopardy.sample.Questions;
 import org.w3c.dom.ls.LSOutput;
 
+import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Paths;
+import java.nio.file.Files;
 import java.sql.Array;
 import java.util.ArrayList;
 
@@ -11,12 +15,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Board {
   private int numberOfPlayers = 0;
   private int currentAnswerIndex;
   private List<Player> contestants;
-  private List<Question> questions;
+  private List<Question> questions = new ArrayList<>();
   private List<String> answers = new ArrayList<>();
 
   public int getNumberOfPlayers() { return numberOfPlayers; }
@@ -43,16 +48,62 @@ public class Board {
   }
 
   Board(int session, int numberOfPlayers, int difficulty) {
-    // TODO: pass difficulty to Player ctor
-    Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
+    // DONE: read from csv file using nio api
+    try{
+      List<Player> contestants = new ArrayList<>();
+      Stream<String> namesStream = Files.lines(FileSystems.getDefault().getPath("src","com","jeopardy", "Players.csv"));
+      namesStream.forEach(line -> {
+        String[] namesArr = line.split(",");
+        Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
 
-    setContestants(Contestants.getContestants(numberOfPlayers));
-    setNumberOfPlayers(numberOfPlayers);
+        // DONE: pass difficulty to Player ctor
+        for (String name : namesArr) {
+          if (difficulty == 1) {
+            contestants.add(new RookiePlayer(name, expertise));
+          } else {
+            contestants.add(new AdvancedPlayer(name, expertise));
+          }
+        }
+      });
 
-    // set questions and answers
-    List<Question> questions = Questions.getQuestions(session);
-    setQuestions(questions);
-    setAnswers(questions);
+      // Randomly select contestants from local contestants list
+      setContestants(selectContestants(contestants, numberOfPlayers));
+      setNumberOfPlayers(numberOfPlayers);
+
+
+      namesStream.close();
+
+      // set questions and answers
+      List<String[]> questions = new ArrayList<>();
+      Stream<String> questionsStream = Files.lines(FileSystems.getDefault().getPath("src","com","jeopardy", "Questions.csv"));
+      questionsStream.forEach(line -> {
+        String[] question = line.split(",");
+        questions.add(question);
+      });
+      questionsStream.close();
+
+      // TODO: refactor to subclasses: TFQuestion & MCQuestion
+
+      for (String[] question : questions) {
+        Question temp;
+        int category = Integer.parseInt(question[0]);
+        String body = question[1];
+        int dollarValue = Integer.parseInt(question[2]);
+        if (question[3].equals("true") || question[3].equals("false")) {
+          boolean answer = Boolean.parseBoolean(question[3]);
+          temp = new Question(category, body, dollarValue, answer);
+        } else {
+          String answer = question[3];
+          temp = new Question(category, body, dollarValue, answer);
+        }
+        if (session == category) {
+          this.questions.add(temp);
+        }
+      }
+      setAnswers(getQuestions());
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   public String getPlayerName() {
@@ -85,9 +136,6 @@ public class Board {
     StringBuilder result = new StringBuilder();
     int count = 1;
     for (Question q : questions) {
-      if (count % 3 == 0) {
-        result.append("\n");
-      }
       result.append(q.getDollarValue() + "\t");
       count ++;
     }
@@ -152,5 +200,20 @@ public class Board {
     System.out.print(result ? "Correct!" : "Hmm... I don't think so.");
     return result;
   }
+
+  private List<Player> selectContestants(List<Player> pool, int numberOfPlayers) {
+    List<Player> results = new ArrayList<>();
+
+    while(results.size() < numberOfPlayers) {
+      int index = new Random().nextInt(pool.size());
+      //Done: Check if there is any duplicates
+      results.add(pool.get(index));
+      pool.remove(index);
+    }
+
+    return results;
+  }
+
+
 }
 
