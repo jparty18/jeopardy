@@ -1,0 +1,9 @@
+1,Java source files have a _________ extension,200,.java
+1,The JVM provides an independent operating environment for Java programs,200,true
+1,The _________ method is the entry point for all Java programs,200,main()
+1,Java programs can not run unchanged in different environments and operating systems.,200,false
+1,Java source files are compiled into ______ with _________,400,bytecode & javac
+2,A class (or type) is a __________ for objects,200,blueprint
+2,An _______ is an actual object of some type,200,instance
+2,Every object instance has a type,300,true
+2,Fields can be initialized with values and numerics have default value of null,300,false
