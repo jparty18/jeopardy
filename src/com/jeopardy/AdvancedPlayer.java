@@ -7,7 +7,6 @@ public class AdvancedPlayer extends Player {
   }
 
   // business methods
-  //implement interface abstract method
   @Override
   public int deductScore(int currentQuestionValue) {
     int score = getScore();
@@ -16,10 +15,11 @@ public class AdvancedPlayer extends Player {
     return score;
   }
 
-  @Override
+  @Override  //implement interface abstract method
   public int askForHelp(int currentQuestionValue) {
     int result = 0;
-    System.out.println("Help has been called and you are getting nothing for this one!");
+    System.out.println("Help has been called and no value added or subtracted!");
+    this.setNeedHelp();
     return result;
   }
 
@@ -27,7 +27,5 @@ public class AdvancedPlayer extends Player {
   public String toString() {
     return super.toString();
   }
-
-
 }
 
