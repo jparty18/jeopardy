@@ -10,15 +10,18 @@ import java.util.stream.Stream;
 public class Board {
   private int numberOfPlayers = 0;
   private int currentAnswerIndex;
+  private Mode mode;
   private List<Player> contestants = new ArrayList<>();
   private List<Question> questions = new ArrayList<>();
   private List<String> answers = new ArrayList<>();
+
 
   public Board(int session, int numberOfPlayers, int difficulty) {
     // DONE: read from csv file using nio api
     Stream<String> namesStream = textReader("Players.csv");
     setNumberOfPlayers(numberOfPlayers);
-    setContestants(namesStream, difficulty);
+    setMode(difficulty);
+    setContestants(namesStream);
 
     // set questions and answers
     Stream<String> questionsStream = textReader("Questions.csv");
@@ -32,15 +35,27 @@ public class Board {
     this.numberOfPlayers = numberOfPlayers;
   }
 
+  public Mode getMode() { return mode; }
+  public void setMode(int userInput) {
+    Mode mode;
+    if (userInput == 1) {
+      mode = Mode.EASY;
+    } else {
+      mode = Mode.HARD;
+    }
+    this.mode = mode;
+  }
+
+
   public List<Player> getContestants() { return contestants; }
-  private void setContestants(Stream<String> playerStream, int difficulty) {
+  private void setContestants(Stream<String> playerStream) {
     List<Player> result = new ArrayList<>();
     playerStream.forEach(line -> {
       String[] namesArr = line.split(",");
 
       // DONE: pass difficulty to Player ctor
       for (String name : namesArr) {
-        if (difficulty == 1) {
+        if (getMode() == Mode.EASY) {
           result.add(new RookiePlayer(name));
         } else {
           result.add(new AdvancedPlayer(name));
@@ -123,7 +138,8 @@ public class Board {
   }
 
   private void intro(){
-    Stream<String> banner = textReader("intro.txt");
+    Stream<String> banner;
+    banner = getMode() == Mode.EASY ? textReader("banner.txt") : textReader("intro.txt");
     slowMo(banner);
 
     System.out.println("\n" + "Tonight's contestants are: ");
