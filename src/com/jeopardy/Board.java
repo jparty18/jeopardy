@@ -70,10 +70,10 @@ public class Board {
       int dollarValue = Integer.parseInt(question[2]);
       if (question[3].equals("true") || question[3].equals("false")) {
         boolean answer = Boolean.parseBoolean(question[3]);
-        temp = new Question(category, body, dollarValue, answer);
+        temp = new TFQuestion(category, body, dollarValue, answer);
       } else {
         String answer = question[3];
-        temp = new Question(category, body, dollarValue, answer);
+        temp = new MCQuestion(category, body, dollarValue, answer);
       }
       if (session == category) {
         questions.add(temp);
@@ -103,13 +103,14 @@ public class Board {
       currentQuestion.displayQuestion();
 
       // DONE: display answer choices
-      showAnswerChoices(currentQuestion);
+      currentQuestion.showAnswerChoices(answers);
+
       // 1: correct answer 2: tricky answer 3: bs
       int answer = getUserUInput();
 
       // DONE: process score for the player
       dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
-      processScore(checkAnswer(answer), currentPlayer, dollarValue);
+      processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
 
 
       // DONE: display scores
