@@ -1,8 +1,9 @@
 package com.jeopardy;
 
+import java.util.List;
 import java.util.Objects;
 
-public class Question {
+public abstract class Question {
 
     private boolean isDailyDouble = false;
     private boolean isTrueFalse = false;
@@ -48,6 +49,9 @@ public class Question {
         }
         System.out.println(questionDisplay.toString());
     }
+
+    public abstract void showAnswerChoices(List<String> answers);
+    public abstract boolean checkAnswer(int answer);
 
     //Accessor methods
     public boolean isDailyDouble() {
