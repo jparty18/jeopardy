@@ -34,10 +34,5 @@ public class Jeopardy {
 
     Board newGame = BoardFactory.createBoard(session, numberPlayers, difficulty);
     newGame.start();
-    // TODO: clear the console window
-
-
-
-
   }
 }
