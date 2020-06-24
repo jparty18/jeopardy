@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class MCQuestion extends Question {
-
     public MCQuestion(int session, String questionContent, int dollarValue, String answer) {
         super(session, questionContent, dollarValue, answer);
     }
@@ -27,7 +26,7 @@ public class MCQuestion extends Question {
             }
             count ++;
         }
-        System.out.print(0 + ": Ask for help.");
+        System.out.print(Board.HELP_INPUT + ": Ask for help.");
         System.out.print("\n" + "Your answer: ");
     }
 }

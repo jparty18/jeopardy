@@ -8,6 +8,8 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class Board {
+  public static final int HELP_INPUT = 0;
+
   private int numberOfPlayers = 0;
   private int currentAnswerIndex;
   private Mode mode;
@@ -76,7 +78,7 @@ public class Board {
       result.add(question);
     });
 
-    // TODO: refactor to subclasses: TFQuestion & MCQuestion
+    // DONE: refactor to subclasses: TFQuestion & MCQuestion
     for (String[] question : result) {
       Question temp;
       int category = Integer.parseInt(question[0]);
@@ -106,7 +108,7 @@ public class Board {
   public void start() {
     intro();
     while (getQuestions().size() > 0) {
-      Player currentPlayer = getPlayerName();
+      Player currentPlayer = getPlayer();
       String currentPlayerName = currentPlayer.getName();
       System.out.println("\n"+ "Our guest is: " + currentPlayerName);
       System.out.println(currentPlayerName + ", please choose a question.");
@@ -118,15 +120,20 @@ public class Board {
       currentQuestion.displayQuestion();
 
       // DONE: display answer choices
+
       currentQuestion.showAnswerChoices(answers);
 
       // 1: correct answer 2: tricky answer 3: bs
       int answer = getUserUInput();
 
       // DONE: process score for the player
-      dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
-      processScore(currentQuestion.checkAnswer(answer, currentPlayer), currentPlayer, dollarValue);
 
+      if (answer == HELP_INPUT) {
+        callHelp(currentPlayer, currentQuestion);
+      } else {
+        dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
+        processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
+      }
 
       // DONE: display scores
       displayScores();
@@ -183,8 +190,12 @@ public class Board {
     return userInput;
   }
 
-  private Player getPlayerName() {
-    return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1));
+  private Player getPlayer() {
+    int numberOfPlayers = 1;
+    if (getNumberOfPlayers() > 1) {
+      numberOfPlayers = getNumberOfPlayers() - 1;
+    }
+    return contestants.get(new Random().nextInt(numberOfPlayers));
   }
 
   private Question getQuestion(int dollarValue) {
@@ -216,13 +227,19 @@ public class Board {
     if(isCorrect){
       currentPlayer.addScore(dollarValue);
       System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
-    }
-    else if (currentPlayer.isNeedHelp()) {
-      currentPlayer.addScore(currentPlayer.askForHelp(dollarValue));
-    } else if (!isCorrect && !currentPlayer.isNeedHelp()) {
+    } else {
       currentPlayer.deductScore(dollarValue);
     }
   }
+
+  private void callHelp(Player currentPlayer, Question currentQuestion) {
+    System.out.println("\n" + "Jay says: The answer is " + currentQuestion.getAnswer());
+    processScore(true, currentPlayer, currentPlayer.askForHelp(currentQuestion.getDollarValue()));
+    if (currentQuestion.isDailyDouble()) {
+      System.out.println("You missed a daily double chance... :(");
+    }
+  }
+
 
   private void displayScores(){
     StringBuilder scores = new StringBuilder("The scores are: ");
@@ -247,20 +264,6 @@ public class Board {
               finalResults.add(p.getName() +": " + p.getScore());
             });
     slowMo(finalResults);
-  }
-
-  private void showAnswerChoices(Question currentQuestion) {
-    String answer = currentQuestion.getAnswer();
-
-    int count = 1;
-    for (String a : answers) {
-      System.out.print(count + ": " + a + "\t" + "\t");
-      if (a.equals(answer)) {
-        currentAnswerIndex = count;
-      }
-      count ++;
-    }
-    System.out.print("\n" + "Your answer: ");
   }
 
   private List<Player> selectContestants(List<Player> pool, int numberOfPlayers) {

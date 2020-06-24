@@ -19,8 +19,7 @@ public class AdvancedPlayer extends Player {
   @Override
   public int askForHelp(int currentQuestionValue) {
     int result = 0;
-    System.out.println("Help has been called and no value added or subtracted!");
-    this.setNeedHelp();
+    System.out.println("Help has been called and you are getting nothing for this one!");
     return result;
   }
 

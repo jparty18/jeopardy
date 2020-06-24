@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Objects;
 
 public abstract class Question {
-
     private boolean isDailyDouble = false;
     private boolean isTrueFalse = false;
     private int session;
@@ -52,54 +51,41 @@ public abstract class Question {
     }
 
     public abstract void showAnswerChoices(List<String> answers);
-    public boolean checkAnswer(int answer, Player currentPlayer) {
+    public boolean checkAnswer(int answer) {
         boolean result = answer == currentAnswerIndex;
-        if (answer == 0) {
-        currentPlayer.setNeedHelp();
-        } else {
-            System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
-            System.out.println("\n");
-        }
+
+        System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
+        System.out.println("\n");
+
         return result;
     };
 
     //Accessor methods
-    public boolean isDailyDouble() {
-        return isDailyDouble;
-    }
-
-    public void setDailyDouble() {
+    public boolean isDailyDouble() { return isDailyDouble; }
+    private void setDailyDouble() {
         if(Math.random() < 0.26){
             isDailyDouble = true;
         }
     }
 
-    public int getSession() {
-        return session;
-    }
-
-    public void setSession(int session) {
+    public int getSession() { return session; }
+    private void setSession(int session) {
         this.session = session;
     }
 
-    public String getQuestionContent() {
-        return questionContent;
-    }
-
-    public void setQuestionContent(String questionContent) {
+    public String getQuestionContent() { return questionContent; }
+    private void setQuestionContent(String questionContent) {
         this.questionContent = questionContent;
     }
 
     public String getAnswer() { return answer; }
-    public void setAnswer(String answer) {
+    private void setAnswer(String answer) {
         this.answer = answer;
     }
 
-    public int getDollarValue() {
-        return dollarValue;
-    }
+    public int getDollarValue() { return dollarValue; }
 
-    public void setDollarValue(int dollarValue) {
+    private void setDollarValue(int dollarValue) {
         this.dollarValue = dollarValue;
     }
 

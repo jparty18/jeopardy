@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class TFQuestion extends Question {
-    private int currentAnswerIndex;
-
     public TFQuestion(int session, String questionContent, int dollarValue, boolean answer) {
         super(session, questionContent, dollarValue, answer);
     }
@@ -28,7 +26,7 @@ public class TFQuestion extends Question {
             }
             count ++;
         }
-        System.out.print(0 + ": Ask for help. ");
+        System.out.print(Board.HELP_INPUT + ": Ask for help. ");
         System.out.print("\n" + "Your answer: ");
     }
 }

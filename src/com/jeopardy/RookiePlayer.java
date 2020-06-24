@@ -10,8 +10,7 @@ public class RookiePlayer extends Player {
   public int askForHelp(int currentQuestionValue) {
     int score = 0;
     score += currentQuestionValue;
-    System.out.println("Help has been called and value of this question automatically added!");
-    this.setNeedHelp();
+    System.out.println("Help has been called and you got free money $" + currentQuestionValue + "!");
     return score;
   }
 

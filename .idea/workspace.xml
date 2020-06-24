@@ -19,8 +19,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="Board and Players">
+    <list default="true" id="275a4560-cd47-4799-b960-0ec769c7ae3c" name="Default Changelist" comment="Board and Players">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeopardy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jeopardy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/AdvancedPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Assistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Assistance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/BoardFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/MCQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/MCQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Mode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Mode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/RookiePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/RookiePlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/TFQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/TFQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jeopardy/com/jeopardy/client/Jeopardy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/AdvancedPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Assistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Assistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/MCQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/MCQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/RookiePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/RookiePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jeopardy/TFQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jeopardy/TFQuestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +60,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dgfBS5D227YUtnNajuEOi30XOU" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectViewState">
     <option name="flattenModules" value="true" />
     <option name="flattenPackages" value="true" />
@@ -170,13 +193,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Board and Players" />
@@ -219,44 +241,44 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852145244" />
-    <state width="1637" height="332" key="GridCell.Tab.0.bottom" timestamp="1593032150818">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="379" key="GridCell.Tab.0.bottom" timestamp="1593036778620">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057758" />
     <state width="1637" height="332" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
     <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235156" />
     <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135439" />
-    <state width="2518" height="379" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593025415032" />
+    <state width="2518" height="379" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778620" />
     <state width="2518" height="615" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013393" />
     <state width="2518" height="882" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179418" />
-    <state width="1637" height="332" key="GridCell.Tab.0.center" timestamp="1593032150818">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="379" key="GridCell.Tab.0.center" timestamp="1593036778619">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
     <state width="1637" height="332" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
     <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235155" />
     <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135438" />
-    <state width="2518" height="379" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593025415031" />
+    <state width="2518" height="379" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />
     <state width="2518" height="615" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013392" />
     <state width="2518" height="882" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179418" />
-    <state width="1637" height="332" key="GridCell.Tab.0.left" timestamp="1593032150818">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="379" key="GridCell.Tab.0.left" timestamp="1593036778619">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
     <state width="1637" height="332" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
     <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235154" />
     <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135438" />
-    <state width="2518" height="379" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593025415030" />
+    <state width="2518" height="379" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />
     <state width="2518" height="615" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013391" />
     <state width="2518" height="882" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179417" />
-    <state width="1637" height="332" key="GridCell.Tab.0.right" timestamp="1593032150818">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="2518" height="379" key="GridCell.Tab.0.right" timestamp="1593036778619">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
     <state width="1637" height="332" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
     <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235155" />
     <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135439" />
-    <state width="2518" height="379" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593025415031" />
+    <state width="2518" height="379" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />
     <state width="2518" height="615" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013393" />
     <state width="2518" height="882" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179418" />
     <state x="392" y="263" key="MultipleFileMergeDialog" timestamp="1592852681844">
@@ -301,5 +323,10 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="570" y="275" key="svn4idea.import.options/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852858437" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jeopardy$QuestionTest.ic" NAME="QuestionTest Coverage Results" MODIFIED="1593027288881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jeopardy.*</FILTER>
+    </SUITE>
   </component>
 </project>
