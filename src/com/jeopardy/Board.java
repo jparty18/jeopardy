@@ -16,12 +16,12 @@ public class Board {
 
   public Board(int session, int numberOfPlayers, int difficulty) {
     // DONE: read from csv file using nio api
-    Stream<String> namesStream = csvReader("Players.csv");
+    Stream<String> namesStream = textReader("Players.csv");
     setNumberOfPlayers(numberOfPlayers);
     setContestants(namesStream, difficulty);
 
     // set questions and answers
-    Stream<String> questionsStream = csvReader("Questions.csv");
+    Stream<String> questionsStream = textReader("Questions.csv");
     setQuestions(questionsStream, session);
     setAnswers(getQuestions());
   }
@@ -124,15 +124,41 @@ public class Board {
   }
 
   private void intro(){
-    System.out.println("\nWelcome to the J-PARTY!");
+    Stream<String> banner = textReader("intro.txt");
+    slowMo(banner);
 
-    StringBuilder intro = new StringBuilder("Tonight's contestants are: " + "\n");
-    intro.append(getAllPlayers());
-    System.out.println(intro);
+    System.out.println("\n" + "Tonight's contestants are: ");
+    slowMo(getContestants().stream().map(p -> p.getName()));
 
     System.out.println("Press enter to begin");
     Scanner wait = new Scanner(System.in);
     wait.nextLine();
+  }
+
+  private void slowMo(Stream<String> textStream) {
+    System.out.println("\n");
+    textStream.forEach(line -> {
+      System.out.println(line);
+      try {
+        Thread.sleep(100);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    });
+    System.out.println("\n");
+  }
+
+  private void slowMo(List<String> textList) {
+    System.out.println("\n");
+    textList.forEach(line -> {
+      System.out.println(line);
+      try {
+        Thread.sleep(250);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    });
+    System.out.println("\n");
   }
 
   private int getUserUInput() {
@@ -143,14 +169,6 @@ public class Board {
 
   private String getPlayerName() {
     return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1)).getName();
-  }
-
-  private String getAllPlayers() {
-    StringBuilder names = new StringBuilder();
-    for (Player player : getContestants()) {
-      names.append(player.getName() + "\t" + "\t");
-    }
-    return names.toString();
   }
 
   private Question getQuestion(int dollarValue) {
@@ -212,14 +230,15 @@ public class Board {
     for (int i = 0; i < 50; i++) {
       System.out.println("\n");
     }
-    System.out.println("\n" + "\u001B[44m \n \u001B[41m \u001B[30m" +
-            "*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*  F-I-N-A-L   S-C-O-R-E  *$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*" +
-            "\n\u001B[44m" + "\n\u001B[0m" );
+    String banner = "✩░▒▓▆▅▃▂▁ \uD83C\uDD75\uD83C\uDD78\uD83C\uDD7D\uD83C\uDD70\uD83C\uDD7B \uD83C\uDD82\uD83C\uDD72\uD83C\uDD7E\uD83C\uDD81\uD83C\uDD74 ▁▂▃▅▆▓▒░✩";
+    List<String> finalResults = new ArrayList<>();
+    finalResults.add(banner);
     getContestants().stream()
             .sorted(Comparator.comparing(Player::getScore).reversed())
             .forEach(p -> {
-              System.out.println(p.getName() +": " + p.getScore());
+              finalResults.add(p.getName() +": " + p.getScore());
             });
+    slowMo(finalResults);
   }
 
   private void showAnswerChoices(Question currentQuestion) {
@@ -256,7 +275,7 @@ public class Board {
     return results;
   }
 
-  private Stream<String> csvReader (String fileName) {
+  private Stream<String> textReader(String fileName) {
     Stream<String> result = null;
     try {
       result = Files.lines(Paths.get("sample",fileName));
