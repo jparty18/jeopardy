@@ -52,10 +52,14 @@ public abstract class Question {
     }
 
     public abstract void showAnswerChoices(List<String> answers);
-    public boolean checkAnswer(int answer) {
+    public boolean checkAnswer(int answer, Player currentPlayer) {
         boolean result = answer == currentAnswerIndex;
-        System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
-        System.out.println("\n");
+        if (answer == 0) {
+        currentPlayer.setNeedHelp();
+        } else {
+            System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
+            System.out.println("\n");
+        }
         return result;
     };
 

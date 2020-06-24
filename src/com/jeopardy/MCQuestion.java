@@ -27,6 +27,7 @@ public class MCQuestion extends Question {
             }
             count ++;
         }
+        System.out.print(0 + ": Ask for help.");
         System.out.print("\n" + "Your answer: ");
     }
 }
