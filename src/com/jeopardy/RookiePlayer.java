@@ -7,14 +7,12 @@ public class RookiePlayer extends Player {
   }
 
   @Override//implement interface abstract method
-  public int askForHelp() {
-    int result = 0;
-    System.out.println("Skip this question and value of this question automatically added!");
-    /*
-    Skip this question for rookiePlayer
-    points automatically added "for free"
-     */
-    return result;
+  public int askForHelp(int currentQuestionValue) {
+    int score = 0;
+    score += currentQuestionValue;
+    System.out.println("Help has been called and value of this question automatically added!");
+    this.setNeedHelp();
+    return score;
   }
 
   @Override

@@ -17,13 +17,10 @@ public class AdvancedPlayer extends Player {
   }
 
   @Override
-  public int askForHelp() {
+  public int askForHelp(int currentQuestionValue) {
     int result = 0;
-    System.out.println("Skip this question and no value added or subtracted!");
-    /*
-    Skip this question for advancedPlayer
-    no points add or deducted
-     */
+    System.out.println("Help has been called and no value added or subtracted!");
+    this.setNeedHelp();
     return result;
   }
 

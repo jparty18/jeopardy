@@ -2,6 +2,6 @@ package com.jeopardy;
 
 public interface Assistance {
 
-  public int askForHelp();
+  public int askForHelp(int currentQuestionValue);
 }
 

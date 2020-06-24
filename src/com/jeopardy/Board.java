@@ -106,9 +106,10 @@ public class Board {
   public void start() {
     intro();
     while (getQuestions().size() > 0) {
-      String currentPlayer = getPlayerName();
-      System.out.println("\n"+ "Our guest is: " + currentPlayer);
-      System.out.println(currentPlayer + ", please choose a question.");
+      Player currentPlayer = getPlayerName();
+      String currentPlayerName = currentPlayer.getName();
+      System.out.println("\n"+ "Our guest is: " + currentPlayerName);
+      System.out.println(currentPlayerName + ", please choose a question.");
 
       System.out.println(getAllQuestion());
       System.out.print("Choose a dollar value: $");
@@ -124,7 +125,7 @@ public class Board {
 
       // DONE: process score for the player
       dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
-      processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
+      processScore(currentQuestion.checkAnswer(answer, currentPlayer), currentPlayer, dollarValue);
 
 
       // DONE: display scores
@@ -182,8 +183,8 @@ public class Board {
     return userInput;
   }
 
-  private String getPlayerName() {
-    return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1)).getName();
+  private Player getPlayerName() {
+    return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1));
   }
 
   private Question getQuestion(int dollarValue) {
@@ -210,26 +211,18 @@ public class Board {
     return result.toString();
   }
 
-  private void processScore(boolean isCorrect, String playerName, int dollarValue){
-    //get contestant by name, loop through contestants list
-    Player currentPlayer = null;
-    for(Player player: getContestants()){
-      if(player.getName().equals(playerName)){
-        currentPlayer = player;
-        break;
-      }
-    }
-
-    //check isCorrect, increase for correct, decrease for incorrect
+  private void processScore(boolean isCorrect, Player currentPlayer, int dollarValue){
+   //check isCorrect, increase for correct, decrease for incorrect
     if(isCorrect){
       currentPlayer.addScore(dollarValue);
       System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
     }
-    else{
+    else if (currentPlayer.isNeedHelp()) {
+      currentPlayer.addScore(currentPlayer.askForHelp(dollarValue));
+    } else if (!isCorrect && !currentPlayer.isNeedHelp()) {
       currentPlayer.deductScore(dollarValue);
     }
   }
-
 
   private void displayScores(){
     StringBuilder scores = new StringBuilder("The scores are: ");
@@ -268,13 +261,6 @@ public class Board {
       count ++;
     }
     System.out.print("\n" + "Your answer: ");
-  }
-
-  private boolean checkAnswer(int answer) {
-    boolean result = answer == currentAnswerIndex;
-    System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
-    System.out.println("\n");
-    return result;
   }
 
   private List<Player> selectContestants(List<Player> pool, int numberOfPlayers) {
