@@ -1,114 +1,150 @@
 package com.jeopardy;
 
-import com.jeopardy.sample.Contestants;
-import com.jeopardy.sample.Questions;
-import org.w3c.dom.ls.LSOutput;
-
 import java.io.IOException;
-import java.nio.file.FileSystems;
 import java.nio.file.Paths;
 import java.nio.file.Files;
-import java.sql.Array;
 import java.util.*;
 
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Board {
   private int numberOfPlayers = 0;
   private int currentAnswerIndex;
-  private List<Player> contestants;
+  private List<Player> contestants = new ArrayList<>();
   private List<Question> questions = new ArrayList<>();
   private List<String> answers = new ArrayList<>();
 
+  public Board(int session, int numberOfPlayers, int difficulty) {
+    // DONE: read from csv file using nio api
+    Stream<String> namesStream = csvReader("Players.csv");
+    setNumberOfPlayers(numberOfPlayers);
+    setContestants(namesStream, difficulty);
+
+    // set questions and answers
+    Stream<String> questionsStream = csvReader("Questions.csv");
+    setQuestions(questionsStream, session);
+    setAnswers(getQuestions());
+  }
+
+  // Accessor methods
   public int getNumberOfPlayers() { return numberOfPlayers; }
   private void setNumberOfPlayers(int numberOfPlayers) {
     this.numberOfPlayers = numberOfPlayers;
   }
 
   public List<Player> getContestants() { return contestants; }
-  private void setContestants(List<Player> contestants) {
-    this.contestants = contestants;
+  private void setContestants(Stream<String> playerStream, int difficulty) {
+    List<Player> result = new ArrayList<>();
+    playerStream.forEach(line -> {
+      String[] namesArr = line.split(",");
+      Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
+
+      // DONE: pass difficulty to Player ctor
+      for (String name : namesArr) {
+        if (difficulty == 1) {
+          result.add(new RookiePlayer(name, expertise));
+        } else {
+          result.add(new AdvancedPlayer(name, expertise));
+        }
+      }
+    });
+
+    // Randomly select contestants from local contestants list
+    contestants = selectContestants(result, getNumberOfPlayers());
   }
 
   public List<Question> getQuestions() { return questions; }
-  public void setQuestions(List<Question> questions) {
-    this.questions = questions;
+  private void setQuestions(Stream<String> questionStream, int session) {
+    List<String[]> result = new ArrayList<>();
+
+    questionStream.forEach(line -> {
+      String[] question = line.split(",");
+      result.add(question);
+    });
+
+    // TODO: refactor to subclasses: TFQuestion & MCQuestion
+    for (String[] question : result) {
+      Question temp;
+      int category = Integer.parseInt(question[0]);
+      String body = question[1];
+      int dollarValue = Integer.parseInt(question[2]);
+      if (question[3].equals("true") || question[3].equals("false")) {
+        boolean answer = Boolean.parseBoolean(question[3]);
+        temp = new Question(category, body, dollarValue, answer);
+      } else {
+        String answer = question[3];
+        temp = new Question(category, body, dollarValue, answer);
+      }
+      if (session == category) {
+        questions.add(temp);
+      }
+    }
   }
 
   public List<String> getAnswers() { return answers; }
-
-  public void setAnswers(List<Question> questions) {
+  private void setAnswers(List<Question> questions) {
     for (Question q : questions) {
       answers.add(q.getAnswer());
     }
   }
 
-  Board(int session, int numberOfPlayers, int difficulty) {
-    // DONE: read from csv file using nio api
-    try{
-      List<Player> contestants = new ArrayList<>();
-      Stream<String> namesStream = Files.lines(FileSystems.getDefault().getPath("src","com","jeopardy", "Players.csv"));
-      namesStream.forEach(line -> {
-        String[] namesArr = line.split(",");
-        Expertise expertise = difficulty == 1 ? Expertise.ROOKIE : Expertise.ADVANCED;
+  // Business methods
+  public void start() {
+    intro();
+    while (getQuestions().size() > 0) {
+      String currentPlayer = getPlayerName();
+      System.out.println("\n"+ "Our guest is: " + currentPlayer);
+      System.out.println(currentPlayer + ", please choose a question.");
 
-        // DONE: pass difficulty to Player ctor
-        for (String name : namesArr) {
-          if (difficulty == 1) {
-            contestants.add(new RookiePlayer(name, expertise));
-          } else {
-            contestants.add(new AdvancedPlayer(name, expertise));
-          }
-        }
-      });
+      System.out.println(getAllQuestion());
+      System.out.print("Choose a dollar value: $");
+      int dollarValue = getUserUInput();
+      Question currentQuestion = getQuestion(dollarValue);
+      currentQuestion.displayQuestion();
 
-      // Randomly select contestants from local contestants list
-      setContestants(selectContestants(contestants, numberOfPlayers));
-      setNumberOfPlayers(numberOfPlayers);
+      // DONE: display answer choices
+      showAnswerChoices(currentQuestion);
+      // 1: correct answer 2: tricky answer 3: bs
+      int answer = getUserUInput();
+
+      // DONE: process score for the player
+      dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
+      processScore(checkAnswer(answer), currentPlayer, dollarValue);
 
 
-      namesStream.close();
-
-      // set questions and answers
-      List<String[]> questions = new ArrayList<>();
-      Stream<String> questionsStream = Files.lines(FileSystems.getDefault().getPath("src","com","jeopardy", "Questions.csv"));
-      questionsStream.forEach(line -> {
-        String[] question = line.split(",");
-        questions.add(question);
-      });
-      questionsStream.close();
-
-      // TODO: refactor to subclasses: TFQuestion & MCQuestion
-
-      for (String[] question : questions) {
-        Question temp;
-        int category = Integer.parseInt(question[0]);
-        String body = question[1];
-        int dollarValue = Integer.parseInt(question[2]);
-        if (question[3].equals("true") || question[3].equals("false")) {
-          boolean answer = Boolean.parseBoolean(question[3]);
-          temp = new Question(category, body, dollarValue, answer);
-        } else {
-          String answer = question[3];
-          temp = new Question(category, body, dollarValue, answer);
-        }
-        if (session == category) {
-          this.questions.add(temp);
-        }
-      }
-      setAnswers(getQuestions());
-    } catch (IOException e) {
-      e.printStackTrace();
+      // DONE: display scores
+      displayScores();
     }
+    // DONE: display final score
+    displayFinalScores();
+
+    // TODO: option to replay or exit
+    System.out.println("Thank you for playing. See you next time!");
   }
 
-  public String getPlayerName() {
+  private void intro(){
+    System.out.println("\nWelcome to the J-PARTY!");
+
+    StringBuilder intro = new StringBuilder("Tonight's contestants are: " + "\n");
+    intro.append(getAllPlayers());
+    System.out.println(intro);
+
+    System.out.println("Press enter to begin");
+    Scanner wait = new Scanner(System.in);
+    wait.nextLine();
+  }
+
+  private int getUserUInput() {
+    Scanner wait = new Scanner(System.in);
+    int userInput = wait.nextInt();
+    return userInput;
+  }
+
+  private String getPlayerName() {
     return contestants.get(new Random().nextInt(getNumberOfPlayers() - 1)).getName();
   }
 
-  public String getAllPlayers() {
+  private String getAllPlayers() {
     StringBuilder names = new StringBuilder();
     for (Player player : getContestants()) {
       names.append(player.getName() + "\t" + "\t");
@@ -116,7 +152,7 @@ public class Board {
     return names.toString();
   }
 
-  public Question getQuestion(int dollarValue) {
+  private Question getQuestion(int dollarValue) {
     Question result = null;
     boolean set = false;
     for (int i = 0; i < questions.size(); i++) {
@@ -130,7 +166,7 @@ public class Board {
     return result;
   }
 
-  public String getAllQuestion() {
+  private String getAllQuestion() {
     StringBuilder result = new StringBuilder();
     int count = 1;
     for (Question q : questions) {
@@ -140,7 +176,7 @@ public class Board {
     return result.toString();
   }
 
-  public void processScore(boolean isCorrect, String playerName, int dollarValue){
+  private void processScore(boolean isCorrect, String playerName, int dollarValue){
     //get contestant by name, loop through contestants list
     Player currentPlayer = null;
     for(Player player: getContestants()){
@@ -161,7 +197,7 @@ public class Board {
   }
 
 
-  public void displayScores(){
+  private void displayScores(){
     StringBuilder scores = new StringBuilder("The scores are: ");
 
     // append player names and scores
@@ -171,7 +207,7 @@ public class Board {
     System.out.println(scores);
   }
 
-  public void displayFinalScores() {
+  private void displayFinalScores() {
     for (int i = 0; i < 50; i++) {
       System.out.println("\n");
     }
@@ -185,16 +221,9 @@ public class Board {
             });
   }
 
-  public static void clearScreen() {
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
-  }
-
-  public void showAnswerChoices(Question currentQuestion) {
-    List<String> choices = new ArrayList<>();
+  private void showAnswerChoices(Question currentQuestion) {
     String answer = currentQuestion.getAnswer();
 
-    int index = new Random().nextInt(3);
     int count = 1;
     for (String a : answers) {
       System.out.print(count + ": " + a + "\t" + "\t");
@@ -206,7 +235,7 @@ public class Board {
     System.out.print("\n" + "Your answer: ");
   }
 
-  public boolean checkAnswer(int answer) {
+  private boolean checkAnswer(int answer) {
     boolean result = answer == currentAnswerIndex;
     System.out.print(result ? "Correct! " : "Hmm... I don't think so. ");
     System.out.println("\n");
@@ -224,6 +253,17 @@ public class Board {
     }
 
     return results;
+  }
+
+  private Stream<String> csvReader (String fileName) {
+    Stream<String> result = null;
+    try {
+      result = Files.lines(Paths.get("sample",fileName));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return result;
   }
 }
 
