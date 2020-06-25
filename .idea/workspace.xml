@@ -345,9 +345,4 @@
     </state>
     <state x="570" y="275" key="svn4idea.import.options/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852858437" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jeopardy$QuestionTest.ic" NAME="QuestionTest Coverage Results" MODIFIED="1593027288881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.jeopardy.*</FILTER>
-    </SUITE>
-  </component>
 </project>

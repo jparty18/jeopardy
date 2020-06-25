@@ -1,5 +1,5 @@
 package com.jeopardy;
 
 public enum Mode {
-  EASY, HARD
+  EASY, HARD, HELL
 }
