@@ -185,8 +185,18 @@ public class Board {
   }
 
   private int getUserUInput() {
-    Scanner wait = new Scanner(System.in);
-    int userInput = wait.nextInt();
+    int userInput = 0;
+    boolean validInput = false;
+    while (!validInput) {
+      try{
+        Scanner wait = new Scanner(System.in);
+        userInput = wait.nextInt();
+        validInput = true;
+      } catch (InputMismatchException e) {
+        System.out.println("Invalid input. Please enter a valid integer value.");
+      }
+    }
+
     return userInput;
   }
 
