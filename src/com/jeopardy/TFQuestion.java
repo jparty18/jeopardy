@@ -7,26 +7,28 @@ import java.util.Random;
 public class TFQuestion extends Question {
     public TFQuestion(int session, String questionContent, int dollarValue, boolean answer) {
         super(session, questionContent, dollarValue, answer);
+        List<String> temp = new ArrayList<>();
+
+        temp.add("True");
+        temp.add("False");
+        temp.add("It depends");
+        super.setAnswers(temp);
     }
 
-    public void showAnswerChoices(List<String> answers) {
+    public List<String> showAnswerChoices() {
         List<String> choices = new ArrayList<>();
-        String answer = this.getAnswer();
 
-        int index = new Random().nextInt(2);
         int count = 1;
-        for (String a : answers) {
-            // only accept true or false answer values
-            if(!"True".equals(a) && !"False".equals(a)){
-                continue;
-            }
-            System.out.print(count + ": " + a + "\t" + "\t");
-            if (a.equals(answer)) {
+        for (String answer : getAnswers()) {
+            choices.add(count + ": " + answer + "\t" + "\t");
+            if (answer.equals(getAnswer())) {
                 super.currentAnswerIndex = count;
             }
-            count ++;
+            count++;
         }
-        System.out.print(Board.HELP_INPUT + ": Ask for help. ");
-        System.out.print("\n" + "Your answer: ");
+        choices.add(Board.HELP_INPUT + ": Ask for help. ");
+        choices.add("\n" + "Your answer: ");
+
+        return choices;
     }
 }

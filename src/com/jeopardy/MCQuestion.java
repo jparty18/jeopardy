@@ -5,28 +5,39 @@ import java.util.List;
 import java.util.Random;
 
 public class MCQuestion extends Question {
+
+
     public MCQuestion(int session, String questionContent, int dollarValue, String answer) {
         super(session, questionContent, dollarValue, answer);
     }
 
-    public void showAnswerChoices(List<String> answers) {
+    public MCQuestion(int session, String questionContent, int dollarValue, String answer, List<String> answers) {
+        this(session, questionContent, dollarValue, answer);
+        super.setAnswers(answers);
+    }
+
+    public List<String> showAnswerChoices() {
         List<String> choices = new ArrayList<>();
         String answer = this.getAnswer();
 
-        int index = new Random().nextInt(3);
+        int answerIndex = new Random().nextInt(4) + 1;
         int count = 1;
-        for (String a : answers) {
-            //skip true false answer choices for multiple choice questions
-            if("True".equals(a) || "False".equals(a)){
-                continue;
+
+        while (count < 5) {
+            String wrongAnswer = getAnswers().get(new Random().nextInt(getAnswers().size()));
+            if (count == answerIndex) {
+                choices.add(count + ": " + answer + "\t" + "\t");
+                super.currentAnswerIndex = answerIndex;
+                count ++;
+            } else if (!wrongAnswer.equals(answer) && count != answerIndex) {
+                choices.add(count + ": " + wrongAnswer + "\t" + "\t");
+                count ++;
             }
-            System.out.print(count + ": " + a + "\t" + "\t");
-            if (a.equals(answer)) {
-                super.currentAnswerIndex = count;
-            }
-            count ++;
         }
-        System.out.print(Board.HELP_INPUT + ": Ask for help.");
-        System.out.print("\n" + "Your answer: ");
+
+        choices.add(Board.HELP_INPUT + ": Ask for help.");
+        choices.add("\n" + "Your answer: ");
+
+        return choices;
     }
 }

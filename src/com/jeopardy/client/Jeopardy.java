@@ -3,6 +3,7 @@ package com.jeopardy.client;
 import com.jeopardy.Board;
 import com.jeopardy.BoardFactory;
 import com.jeopardy.Question;
+import com.jeopardy.Util;
 
 import java.util.*;
 
@@ -17,6 +18,7 @@ public class Jeopardy {
     while (!validInputs) {
       try {
         Scanner input = new Scanner(System.in);
+        Util.STREAM_DISPLAY(Util.TEXT_READER("Category.txt"));
         System.out.print("Select a category: ");
         session = input.nextInt();
 
