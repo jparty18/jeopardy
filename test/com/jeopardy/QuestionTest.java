@@ -22,14 +22,14 @@ public class QuestionTest {
     @Test
     public void checkAnswer_Boolean_ShouldReturnTrueTest(){
         answers.add("False");
-        trueFalseQuestion.showAnswerChoices(answers);
+        trueFalseQuestion.showAnswerChoices();
         assertTrue(trueFalseQuestion.checkAnswer(trueFalseQuestion.currentAnswerIndex));
     }
 
     @Test
     public void checkAnswer_Boolean_ShouldReturnFalseTest(){
         answers.add("False");
-        trueFalseQuestion.showAnswerChoices(answers);
+        trueFalseQuestion.showAnswerChoices();
         assertFalse(trueFalseQuestion.checkAnswer(3));
     }
 
@@ -37,7 +37,7 @@ public class QuestionTest {
     public void CheckAnswer_MultipleChoice_ShouldReturnTrueTest() {
         answers.add("Wrong answer 1");
         answers.add("Wrong answer 2");
-        multipleChoiceQuestion.showAnswerChoices(answers);
+        multipleChoiceQuestion.showAnswerChoices();
         assertTrue(multipleChoiceQuestion.checkAnswer(multipleChoiceQuestion.currentAnswerIndex));
     }
 
@@ -45,7 +45,7 @@ public class QuestionTest {
     public void checkAnswer_MultipleChoice_ShouldReturnFalseTest(){
         answers.add("Wrong answer 1");
         answers.add("Wrong answer 2");
-        multipleChoiceQuestion.showAnswerChoices(answers);
+        multipleChoiceQuestion.showAnswerChoices();
         assertFalse(multipleChoiceQuestion.checkAnswer(4));
     }
 }

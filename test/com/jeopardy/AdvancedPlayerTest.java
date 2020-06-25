@@ -30,8 +30,8 @@ public class AdvancedPlayerTest {
   @Test
   public void testAskForHelp_tenPercentOfScoreDeductedWhenAdvancedPlayerCallsForHelp() {
     //player1 asks for help for mcQuestion, 1/10 score deducted
-    assertEquals(-40, player1.askForHelp(400));
+    assertEquals(40, player1.askForHelp(400));
     //player2 asks for help for tqQuestion, 1/10 score deducted
-    assertEquals(-20, player2.askForHelp(200));
+    assertEquals(20, player2.askForHelp(200));
   }
 }
