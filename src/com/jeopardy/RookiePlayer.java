@@ -6,12 +6,19 @@ public class RookiePlayer extends Player {
     super(name);
   }
 
-  @Override//implement interface abstract method
-  public int askForHelp(int currentQuestionValue) {
+  //business method
+  @Override
+  public int deductScore(int currentQuestionValue) {
     int score = 0;
-    score += currentQuestionValue;
-    System.out.println("Help has been called and you got free money $" + currentQuestionValue + "!");
     return score;
+  }
+
+  @Override //implement interface abstract method
+  public int askForHelp(int currentQuestionValue) {
+    int result = 0;
+    System.out.println("Help has been called and no value added or subtracted!");
+    this.setNeedHelp();
+    return result;
   }
 
   @Override
