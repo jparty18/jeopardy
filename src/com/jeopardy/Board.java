@@ -1,8 +1,5 @@
 package com.jeopardy;
 
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.nio.file.Files;
 import java.util.*;
 
 import java.util.stream.Stream;
@@ -11,7 +8,6 @@ public class Board {
   public static final int HELP_INPUT = 0;
 
   private int numberOfPlayers = 0;
-  private int currentAnswerIndex;
   private Mode mode;
   private List<Player> contestants = new ArrayList<>();
   private List<Question> questions = new ArrayList<>();
@@ -270,6 +266,20 @@ public class Board {
     }
 
     return results;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Board board = (Board) obj;
+    return getNumberOfPlayers() == board.getNumberOfPlayers() &&
+            getMode() == board.getMode();
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(getNumberOfPlayers(), getMode(), getContestants(), getQuestions());
   }
 }
 
