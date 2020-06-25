@@ -96,7 +96,7 @@
       <recent name="$PROJECT_DIR$/src/com/jeopardy" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Jeopardy">
+  <component name="RunManager" selected="JUnit.PlayerTest">
     <configuration name="Jeopardy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jeopardy.client.Jeopardy" />
       <module name="jeopardy" />
@@ -110,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionTest.questionDisplayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdvancedPlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jeopardy" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +119,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jeopardy" />
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
-      <option name="METHOD_NAME" value="questionDisplayTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.AdvancedPlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionTest.testQuestionDisplayQuestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jeopardy" />
       <extension name="coverage">
         <pattern>
@@ -135,9 +134,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jeopardy" />
-      <option name="MAIN_CLASS_NAME" value="com.jeopardy.QuestionTest" />
-      <option name="METHOD_NAME" value="testQuestionDisplayQuestion" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,12 +156,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RookiePlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jeopardy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jeopardy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jeopardy" />
+      <option name="MAIN_CLASS_NAME" value="com.jeopardy.RookiePlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.AdvancedPlayerTest" />
+        <item itemvalue="JUnit.RookiePlayerTest" />
         <item itemvalue="Application.Jeopardy" />
-        <item itemvalue="JUnit.QuestionTest.testQuestionDisplayQuestion" />
         <item itemvalue="JUnit.QuestionTest.testSession" />
-        <item itemvalue="JUnit.QuestionTest.questionDisplayTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +186,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="37a2e090-d4dc-4759-9dbf-f91eb7308b99" name="Default Changelist" comment="" />
+      <changelist id="275a4560-cd47-4799-b960-0ec769c7ae3c" name="Default Changelist" comment="Board and Players" />
       <created>1592851520375</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -210,10 +224,11 @@
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="2373" y="601" key="#Notifications/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1592982845024" />
-    <state x="2189" y="130" key="#Project_Structure" timestamp="1593023947006">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state x="261" y="76" key="#Project_Structure" timestamp="1593042918185">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="233" y="76" key="#Project_Structure/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592859019238" />
+    <state x="261" y="76" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1593042918184" />
     <state x="2189" y="130" key="#Project_Structure/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023947006" />
     <state x="623" y="186" key="#com.intellij.ide.util.MemberChooser" timestamp="1593029738077">
       <screen x="0" y="0" width="1680" height="1010" />
@@ -230,53 +245,58 @@
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="2810" y="485" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593024735180" />
+    <state x="399" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1593042917081">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="399" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1593042917081" />
     <state x="2486" y="431" key="DetectedRootsChooserDialog" timestamp="1593023860195">
       <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="2486" y="431" key="DetectedRootsChooserDialog/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593023860195" />
-    <state x="533" y="243" key="FileChooserDialogImpl" timestamp="1592852856563">
-      <screen x="0" y="0" width="1504" height="1003" />
+    <state x="595" y="245" key="FileChooserDialogImpl" timestamp="1593042874645">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="533" y="243" key="FileChooserDialogImpl/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852856563" />
+    <state x="595" y="245" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1593042874645" />
     <state x="614" y="413" key="Github.Dialog.Accounts.Choose" timestamp="1592852145244">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="614" y="413" key="Github.Dialog.Accounts.Choose/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592852145244" />
-    <state width="2518" height="379" key="GridCell.Tab.0.bottom" timestamp="1593036778620">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1637" height="740" key="GridCell.Tab.0.bottom" timestamp="1593065227391">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.bottom/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057758" />
-    <state width="1637" height="332" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
+    <state width="1637" height="740" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1593065227391" />
     <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235156" />
     <state width="2518" height="409" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135439" />
     <state width="2518" height="379" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778620" />
     <state width="2518" height="615" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013393" />
     <state width="2518" height="882" key="GridCell.Tab.0.bottom/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179418" />
-    <state width="2518" height="379" key="GridCell.Tab.0.center" timestamp="1593036778619">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1637" height="740" key="GridCell.Tab.0.center" timestamp="1593065227391">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.center/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
-    <state width="1637" height="332" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
+    <state width="1637" height="740" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1593065227391" />
     <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235155" />
     <state width="2518" height="409" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135438" />
     <state width="2518" height="379" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />
     <state width="2518" height="615" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013392" />
     <state width="2518" height="882" key="GridCell.Tab.0.center/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179418" />
-    <state width="2518" height="379" key="GridCell.Tab.0.left" timestamp="1593036778619">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1637" height="740" key="GridCell.Tab.0.left" timestamp="1593065227391">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.left/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
-    <state width="1637" height="332" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
+    <state width="1637" height="740" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1593065227391" />
     <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235154" />
     <state width="2518" height="409" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135438" />
     <state width="2518" height="379" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />
     <state width="2518" height="615" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1037@1792.23.2560.1417" timestamp="1592926013391" />
     <state width="2518" height="882" key="GridCell.Tab.0.left/1792.23.2560.1417/0.23.1792.1041@1792.23.2560.1417" timestamp="1593021179417" />
-    <state width="2518" height="379" key="GridCell.Tab.0.right" timestamp="1593036778619">
-      <screen x="1792" y="23" width="2560" height="1417" />
+    <state width="1637" height="740" key="GridCell.Tab.0.right" timestamp="1593065227391">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1461" height="270" key="GridCell.Tab.0.right/0.0.1504.1003/2256.-109.1366.768@0.0.1504.1003" timestamp="1592861057757" />
-    <state width="1637" height="332" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1593032150818" />
+    <state width="1637" height="740" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1593065227391" />
     <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1033@1792.23.2560.1417" timestamp="1592894235155" />
     <state width="2518" height="409" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1034@1792.23.2560.1417" timestamp="1592923135439" />
     <state width="2518" height="379" key="GridCell.Tab.0.right/1792.23.2560.1417/0.23.1792.1036@1792.23.2560.1417" timestamp="1593036778619" />

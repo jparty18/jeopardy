@@ -20,10 +20,19 @@ public class RookiePlayerTest {
   }
 
   @Test
-  public void testAskForHelp_shouldAddCurrentQuestionValueWhenCalledForHelp() {
-    //player1 asks for help for mcQuestion, score added
-    assertEquals(400, player1.askForHelp(400));
-    //player2 asks for help for tfQuestion, score added
-    assertEquals(200, player2.askForHelp(200));
+  public void testDeductScore_noScoreDeductedIfRookiePlayerChoosesWrongAnswer() {
+    //player1 chooses wrong answer for mcQuestion, no score change
+    assertEquals(0, player1.deductScore(400));
+    //player2 chooses wrong answer for tfQuestion, no score change
+    assertEquals(0, player2.deductScore(200));
+  }
+
+
+  @Test
+  public void testAskForHelp_noScoreChangeWhenRookiePlayerCallsForHelp() {
+    //player1 asks for help for mcQuestion, no score change
+    assertEquals(0, player1.askForHelp(400));
+    //player2 asks for help for tfQuestion, no score change
+    assertEquals(0, player2.askForHelp(200));
   }
 }

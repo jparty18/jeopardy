@@ -15,11 +15,10 @@ public class RookiePlayer extends Player {
 
   @Override //implement interface abstract method
   public int askForHelp(int currentQuestionValue) {
-    int score = 0;
-    score += currentQuestionValue;
-    System.out.println("Help has been called and value of this question automatically added!");
+    int result = 0;
+    System.out.println("Help has been called and no value added or subtracted!");
     this.setNeedHelp();
-    return score;
+    return result;
   }
 
   @Override

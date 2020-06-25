@@ -20,7 +20,7 @@ public class AdvancedPlayerTest {
   }
 
   @Test
-  public void testDeductScore_shouldDeductCurrentQuestionValueIfIncorrect() {
+  public void testDeductScore_shouldDeductCurrentQuestionValueIfAdvancedPlayerChoosesWrongAnswer() {
     //player1 got mcQuestion incorrect, score deducted
     assertEquals(-400, player1.deductScore(400));
     //player got tfQuestion incorrect, score deducted
@@ -28,10 +28,10 @@ public class AdvancedPlayerTest {
   }
 
   @Test
-  public void testAskForHelp_noScoreChangeWhenAdvancedPlayerCallsForHelp() {
-    //player1 asks for help for mcQuestion
-    assertEquals(0, player1.askForHelp(400));
-    //player2 asks for help for tqQuestion
-    assertEquals(0, player2.askForHelp(200));
+  public void testAskForHelp_tenPercentOfScoreDeductedWhenAdvancedPlayerCallsForHelp() {
+    //player1 asks for help for mcQuestion, 1/10 score deducted
+    assertEquals(-40, player1.askForHelp(400));
+    //player2 asks for help for tqQuestion, 1/10 score deducted
+    assertEquals(-20, player2.askForHelp(200));
   }
 }
