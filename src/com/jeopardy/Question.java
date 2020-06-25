@@ -1,5 +1,6 @@
 package com.jeopardy;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,6 +12,7 @@ public abstract class Question {
     private String answer;
     private int dollarValue;
     int currentAnswerIndex;
+    private List<String> answers = new ArrayList<>();
 
     //ctor
     private Question (int session, String questionContent, int dollarValue) {
@@ -50,7 +52,7 @@ public abstract class Question {
         System.out.println(questionDisplay.toString());
     }
 
-    public abstract List<String> showAnswerChoices(List<String> answers);
+    public abstract List<String> showAnswerChoices();
     public boolean checkAnswer(int answer) {
         boolean result = answer == currentAnswerIndex;
 
@@ -84,10 +86,13 @@ public abstract class Question {
     }
 
     public int getDollarValue() { return dollarValue; }
-
     private void setDollarValue(int dollarValue) {
         this.dollarValue = dollarValue;
     }
+
+    public List<String> getAnswers() { return answers; }
+
+    void setAnswers(List<String> answers) { this.answers = answers; }
 
     @Override
     public String toString() {

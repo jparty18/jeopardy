@@ -5,11 +5,18 @@ import java.util.List;
 import java.util.Random;
 
 public class MCQuestion extends Question {
+
+
     public MCQuestion(int session, String questionContent, int dollarValue, String answer) {
         super(session, questionContent, dollarValue, answer);
     }
 
-    public List<String> showAnswerChoices(List<String> answers) {
+    public MCQuestion(int session, String questionContent, int dollarValue, String answer, List<String> answers) {
+        this(session, questionContent, dollarValue, answer);
+        super.setAnswers(answers);
+    }
+
+    public List<String> showAnswerChoices() {
         List<String> choices = new ArrayList<>();
         String answer = this.getAnswer();
 
@@ -17,7 +24,7 @@ public class MCQuestion extends Question {
         int count = 1;
 
         while (count < 5) {
-            String wrongAnswer = answers.get(new Random().nextInt(answers.size()));
+            String wrongAnswer = getAnswers().get(new Random().nextInt(getAnswers().size()));
             if (count == answerIndex) {
                 choices.add(count + ": " + answer + "\t" + "\t");
                 super.currentAnswerIndex = answerIndex;

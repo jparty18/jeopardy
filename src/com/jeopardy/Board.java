@@ -15,7 +15,6 @@ public class Board {
   private Mode mode;
   private List<Player> contestants = new ArrayList<>();
   private List<Question> questions = new ArrayList<>();
-  private List<String> answers = new ArrayList<>();
 
 
   public Board(int session, int numberOfPlayers, int difficulty) {
@@ -28,8 +27,6 @@ public class Board {
     // set questions and answers
     Stream<String> questionsStream = Util.TEXT_READER("Questions.csv");
     setQuestions(questionsStream, session);
-    Stream<String> answers = Util.TEXT_READER("AnswerPool.csv");
-    setAnswers(answers);
   }
 
   // Accessor methods
@@ -81,31 +78,26 @@ public class Board {
 
     // DONE: refactor to subclasses: TFQuestion & MCQuestion
     for (String[] question : result) {
-      Question temp;
       int category = Integer.parseInt(question[0]);
-      String body = question[1];
-      int dollarValue = Integer.parseInt(question[2]);
-      if (question[3].equals("true") || question[3].equals("false")) {
-        boolean answer = Boolean.parseBoolean(question[3]);
-        temp = new TFQuestion(category, body, dollarValue, answer);
-      } else {
-        String answer = question[3];
-        temp = new MCQuestion(category, body, dollarValue, answer);
-      }
       if (session == category) {
+        Question temp;
+
+        String body = question[1];
+        int dollarValue = Integer.parseInt(question[2]);
+        if ("true".equals(question[3]) || "false".equals(question[3])) {
+          boolean answer = Boolean.parseBoolean(question[3]);
+          temp = new TFQuestion(category, body, dollarValue, answer);
+        } else {
+          String answer = question[3];
+          List<String> answers = new ArrayList<>();
+          answers.add(question[4]);
+          answers.add(question[5]);
+          answers.add(question[6]);
+          temp = new MCQuestion(category, body, dollarValue, answer, answers);
+        }
         questions.add(temp);
       }
     }
-  }
-
-  public List<String> getAnswers() { return answers; }
-  private void setAnswers(Stream<String> answers) {
-    answers.forEach(line -> {
-      String[] temp = line.split(",");
-      for (String answer : temp) {
-        this.answers.add(answer);
-      }
-    });
   }
 
   // Business methods
@@ -127,7 +119,7 @@ public class Board {
 
           // DONE: display answer choices
           // 1: correct answer 2: tricky answer 3: bs
-          int answer = Util.INPUT_HANDLER(currentQuestion.showAnswerChoices(answers));
+          int answer = Util.INPUT_HANDLER(currentQuestion.showAnswerChoices());
 
           // DONE: process score for the player
 
