@@ -50,7 +50,7 @@ public abstract class Question {
         System.out.println(questionDisplay.toString());
     }
 
-    public abstract void showAnswerChoices(List<String> answers);
+    public abstract List<String> showAnswerChoices(List<String> answers);
     public boolean checkAnswer(int answer) {
         boolean result = answer == currentAnswerIndex;
 

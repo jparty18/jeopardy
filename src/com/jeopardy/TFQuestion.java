@@ -9,24 +9,25 @@ public class TFQuestion extends Question {
         super(session, questionContent, dollarValue, answer);
     }
 
-    public void showAnswerChoices(List<String> answers) {
+    public List<String> showAnswerChoices(List<String> answers) {
         List<String> choices = new ArrayList<>();
-        String answer = this.getAnswer();
+        List<String> temp = new ArrayList<>();
 
-        int index = new Random().nextInt(2);
+        temp.add("True");
+        temp.add("False");
+        temp.add("It depends");
+
         int count = 1;
-        for (String a : answers) {
-            // only accept true or false answer values
-            if(!"True".equals(a) && !"False".equals(a)){
-                continue;
-            }
-            System.out.print(count + ": " + a + "\t" + "\t");
-            if (a.equals(answer)) {
+        for (String answer : temp) {
+            choices.add(count + ": " + answer + "\t" + "\t");
+            if (answer.equals(getAnswer())) {
                 super.currentAnswerIndex = count;
             }
-            count ++;
+            count++;
         }
-        System.out.print(Board.HELP_INPUT + ": Ask for help. ");
-        System.out.print("\n" + "Your answer: ");
+        choices.add(Board.HELP_INPUT + ": Ask for help. ");
+        choices.add("\n" + "Your answer: ");
+
+        return choices;
     }
 }

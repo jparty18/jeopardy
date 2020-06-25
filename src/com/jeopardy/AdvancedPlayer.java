@@ -17,11 +17,10 @@ public class AdvancedPlayer extends Player {
 
   @Override  //implement interface abstract method
   public int askForHelp(int currentQuestionValue) {
-    int score = 0;
-    score -= 0.1 * currentQuestionValue;
-    System.out.println("Help has been called and 1/10 of the current question value deducted!");
+    double score = 0.1 * currentQuestionValue;
+    System.out.println("Help has been called and 10% of the current question value deducted!");
     this.setNeedHelp();
-    return score;
+    return (int) score;
   }
 
   @Override

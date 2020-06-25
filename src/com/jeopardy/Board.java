@@ -20,15 +20,16 @@ public class Board {
 
   public Board(int session, int numberOfPlayers, int difficulty) {
     // DONE: read from csv file using nio api
-    Stream<String> namesStream = textReader("Players.csv");
+    Stream<String> namesStream = Util.TEXT_READER("Players.csv");
     setNumberOfPlayers(numberOfPlayers);
     setMode(difficulty);
     setContestants(namesStream);
 
     // set questions and answers
-    Stream<String> questionsStream = textReader("Questions.csv");
+    Stream<String> questionsStream = Util.TEXT_READER("Questions.csv");
     setQuestions(questionsStream, session);
-    setAnswers(getQuestions());
+    Stream<String> answers = Util.TEXT_READER("AnswerPool.csv");
+    setAnswers(answers);
   }
 
   // Accessor methods
@@ -98,10 +99,13 @@ public class Board {
   }
 
   public List<String> getAnswers() { return answers; }
-  private void setAnswers(List<Question> questions) {
-    for (Question q : questions) {
-      answers.add(q.getAnswer());
-    }
+  private void setAnswers(Stream<String> answers) {
+    answers.forEach(line -> {
+      String[] temp = line.split(",");
+      for (String answer : temp) {
+        this.answers.add(answer);
+      }
+    });
   }
 
   // Business methods
@@ -111,43 +115,45 @@ public class Board {
       Player currentPlayer = getPlayer();
       String currentPlayerName = currentPlayer.getName();
       System.out.println("\n"+ "Our guest is: " + currentPlayerName);
-      System.out.println(currentPlayerName + ", please choose a question.");
 
-      System.out.println(getAllQuestion());
-      System.out.print("Choose a dollar value: $");
-      int dollarValue = getUserUInput();
-      Question currentQuestion = getQuestion(dollarValue);
-      currentQuestion.displayQuestion();
+      boolean correctDollarValueSelected = false;
+      while(!correctDollarValueSelected) {
+        try {
+          System.out.println(currentPlayerName + ", please choose a question.");
+          System.out.println(getAllQuestion());
+          int dollarValue = Util.INPUT_HANDLER("Choose a dollar value: $");
+          Question currentQuestion = getQuestion(dollarValue);
+          currentQuestion.displayQuestion();
 
-      // DONE: display answer choices
+          // DONE: display answer choices
+          // 1: correct answer 2: tricky answer 3: bs
+          int answer = Util.INPUT_HANDLER(currentQuestion.showAnswerChoices(answers));
 
-      currentQuestion.showAnswerChoices(answers);
+          // DONE: process score for the player
 
-      // 1: correct answer 2: tricky answer 3: bs
-      int answer = getUserUInput();
-
-      // DONE: process score for the player
-
-      if (answer == HELP_INPUT) {
-        callHelp(currentPlayer, currentQuestion);
-      } else {
-        dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
-        processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
+          if (answer == HELP_INPUT) {
+            callHelp(currentPlayer, currentQuestion);
+          } else {
+            dollarValue = currentQuestion.isDailyDouble() ? dollarValue * 2 : dollarValue;
+            processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
+          }
+          correctDollarValueSelected = true;
+        } catch (NullPointerException e) {
+          System.out.println("Invalid input. Please choose one of dollar values displayed above");
+        }
       }
-
       // DONE: display scores
       displayScores();
     }
     // DONE: display final score
     displayFinalScores();
 
-    // TODO: option to replay or exit
     System.out.println("Thank you for playing. See you next time!");
   }
 
   private void intro(){
     Stream<String> banner;
-    banner = getMode() == Mode.EASY ? textReader("banner.txt") : textReader("intro.txt");
+    banner = getMode() == Mode.EASY ? Util.TEXT_READER("banner.txt") : Util.TEXT_READER("intro.txt");
     slowMo(banner);
 
     System.out.println("\n" + "Tonight's contestants are: ");
@@ -184,22 +190,6 @@ public class Board {
     System.out.println("\n");
   }
 
-  private int getUserUInput() {
-    int userInput = 0;
-    boolean validInput = false;
-    while (!validInput) {
-      try{
-        Scanner wait = new Scanner(System.in);
-        userInput = wait.nextInt();
-        validInput = true;
-      } catch (InputMismatchException e) {
-        System.out.println("Invalid input. Please enter a valid integer value.");
-      }
-    }
-
-    return userInput;
-  }
-
   private Player getPlayer() {
     int numberOfPlayers = 1;
     if (getNumberOfPlayers() > 1) {
@@ -234,17 +224,18 @@ public class Board {
 
   private void processScore(boolean isCorrect, Player currentPlayer, int dollarValue){
    //check isCorrect, increase for correct, decrease for incorrect
-    if(isCorrect){
+    if(isCorrect) {
       currentPlayer.addScore(dollarValue);
-      System.out.println(currentPlayer.getName() + " won $" + currentPlayer.getScore());
+      System.out.println(currentPlayer.getName() + " won $" + dollarValue);
     } else {
       currentPlayer.deductScore(dollarValue);
+      System.out.println(currentPlayer.getName() + " lost $" + dollarValue);
     }
   }
 
   private void callHelp(Player currentPlayer, Question currentQuestion) {
     System.out.println("\n" + "Jay says: The answer is " + currentQuestion.getAnswer());
-    processScore(true, currentPlayer, currentPlayer.askForHelp(currentQuestion.getDollarValue()));
+    processScore(false, currentPlayer, currentPlayer.askForHelp(currentQuestion.getDollarValue()));
     if (currentQuestion.isDailyDouble()) {
       System.out.println("You missed a daily double chance... :(");
     }
@@ -287,17 +278,6 @@ public class Board {
     }
 
     return results;
-  }
-
-  private Stream<String> textReader(String fileName) {
-    Stream<String> result = null;
-    try {
-      result = Files.lines(Paths.get("sample",fileName));
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
-    return result;
   }
 }
 
