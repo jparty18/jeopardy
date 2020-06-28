@@ -63,4 +63,19 @@ public class Util {
     });
     System.out.print("\n");
   }
+
+  public static final void CLEAR_SCREEN() {
+    try {
+      final String os = System.getProperty("os.name");
+      if (os.contains("Windows")) {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+      } else {
+        new ProcessBuilder("clear").inheritIO().start().waitFor();
+      }
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 }

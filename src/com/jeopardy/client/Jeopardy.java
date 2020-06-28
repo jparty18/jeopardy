@@ -2,7 +2,6 @@ package com.jeopardy.client;
 
 import com.jeopardy.Board;
 import com.jeopardy.BoardFactory;
-import com.jeopardy.Question;
 import com.jeopardy.Util;
 
 import java.util.*;
@@ -29,6 +28,7 @@ public class Jeopardy {
         System.out.print("Select a mode: ");
         difficulty = input.nextInt();
         validInputs = true;
+        Util.CLEAR_SCREEN();
       } catch (InputMismatchException e) {
         System.out.println("Please enter a valid input: an integer");
       }

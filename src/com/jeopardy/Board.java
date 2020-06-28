@@ -100,6 +100,8 @@ public class Board {
   public void start() {
     intro();
     while (getQuestions().size() > 0) {
+      Util.CLEAR_SCREEN();
+      displayScores();
       Player currentPlayer = getPlayer();
       String currentPlayerName = currentPlayer.getName();
       System.out.println("\n"+ "Our guest is: " + currentPlayerName);
@@ -126,12 +128,15 @@ public class Board {
             processScore(currentQuestion.checkAnswer(answer), currentPlayer, dollarValue);
           }
           correctDollarValueSelected = true;
+          System.out.println("\n" + "Press enter to continue...");
+          Scanner wait = new Scanner(System.in);
+          wait.nextLine();
         } catch (NullPointerException e) {
           System.out.println("Invalid input. Please choose one of dollar values displayed above");
         }
       }
       // DONE: display scores
-      displayScores();
+
     }
     // DONE: display final score
     displayFinalScores();
@@ -141,7 +146,7 @@ public class Board {
 
   private void intro(){
     Stream<String> banner;
-    banner = getMode() == Mode.EASY ? Util.TEXT_READER("banner.txt") : Util.TEXT_READER("intro.txt");
+    banner = getMode() == Mode.EASY ? Util.TEXT_READER("banner_easy.txt") : Util.TEXT_READER("banner_hard.txt");
     slowMo(banner);
 
     System.out.println("\n" + "Tonight's contestants are: ");
@@ -231,7 +236,7 @@ public class Board {
 
 
   private void displayScores(){
-    StringBuilder scores = new StringBuilder("The scores are: ");
+    StringBuilder scores = new StringBuilder("Current Scores: ");
 
     // append player names and scores
     for(Player player: getContestants()){
@@ -241,12 +246,10 @@ public class Board {
   }
 
   private void displayFinalScores() {
-    for (int i = 0; i < 50; i++) {
-      System.out.println("\n");
-    }
-    String banner = "✩░▒▓▆▅▃▂▁ \uD83C\uDD75\uD83C\uDD78\uD83C\uDD7D\uD83C\uDD70\uD83C\uDD7B \uD83C\uDD82\uD83C\uDD72\uD83C\uDD7E\uD83C\uDD81\uD83C\uDD74 ▁▂▃▅▆▓▒░✩";
+    Util.CLEAR_SCREEN();
+    Stream<String> finalScore = Util.TEXT_READER("final.txt");
+    slowMo(finalScore);
     List<String> finalResults = new ArrayList<>();
-    finalResults.add(banner);
     getContestants().stream()
             .sorted(Comparator.comparing(Player::getScore).reversed())
             .forEach(p -> {
