@@ -11,7 +11,9 @@ $ sh build.sh
 $ sh run.sh
 ```
 * Windows
+```sh
 Sorry. Try WSL2 or install Ubuntu, please :)
+```
 
 ### Dependencies
 
